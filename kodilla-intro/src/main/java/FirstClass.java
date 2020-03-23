@@ -18,34 +18,40 @@ public class FirstClass {
         oldNotebook.checkWeight();
         oldNotebook.checkYear();
 
-        int notebookWeight = heavyNotebook.getWeight();
-        System.out.println(notebookWeight);
 
         // Poniżej kod po zmianach
-        System.out.println(" ");
-        System.out.println(" ");
+        System.out.println();
+        System.out.println();
            System.out.println("Po zmianach:");
 
-        laptop komputer = new laptop(600,1000, 2012);
-        System.out.println(komputer.weight +"g " + komputer.price);
-        komputer.checkPrice();
-        komputer.checkWeight();
-        komputer.checkWeightAndYear();
+        Laptop computer = new Laptop(600,1000, 2012);
+        System.out.println(computer.weight +"g " + computer.price);
+        computer.checkPrice();
+        computer.checkWeight();
+        computer.checkWeightAndYear();
 
-        laptop heavyKomputer = new laptop(2000, 1500, 2018);
-        System.out.println(heavyKomputer.weight +"g " + heavyKomputer.price);
-        heavyKomputer.checkPrice();
-        heavyKomputer.checkWeight();
-        heavyKomputer.checkWeightAndYear();
+        Laptop heavyComputer = new Laptop(2000, 1500, 2018);
+        System.out.println(heavyComputer.weight +"g " + heavyComputer.price);
+        heavyComputer.checkPrice();
+        heavyComputer.checkWeight();
+        heavyComputer.checkWeightAndYear();
 
-        laptop oldKomputer = new laptop(1200, 500, 2007);
-        System.out.println(oldKomputer.weight +"g " + oldKomputer.price);
-        oldKomputer.checkPrice();
-        oldKomputer.checkWeight();
-        oldKomputer.checkWeightAndYear();
+        Laptop oldComputer = new Laptop(1200, 500, 2007);
+        System.out.println(oldComputer.weight +"g " + oldComputer.price);
+        oldComputer.checkPrice();
+        oldComputer.checkWeight();
+        oldComputer.checkWeightAndYear();
+
+        int computerYear = oldComputer.getYear();
+        System.out.println(computerYear);
+
+       heavyComputer.displayPrice();
 
 
 
-    }
+
+
+
+       }
 
 }
