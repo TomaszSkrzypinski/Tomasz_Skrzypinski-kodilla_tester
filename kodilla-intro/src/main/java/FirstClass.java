@@ -24,22 +24,11 @@ public class FirstClass {
 
         heavyComputer.displayPrice();
 
-
         LeapYear leapYear = new LeapYear(2000);
         leapYear.ifLeapYear();
 
-}
         LeapYear2 leapYear2 = new LeapYear2(2101);
-
-
-        public void ifLeapYear4() {
-                if (leapYear2.ifLeapYear2() == false) {
-                        System.out.println("Rok nieprzestępny");
-                } else {
-                        System.out.println("Rok przestępny");
-                }
-        }
-
-
+        leapYear2.ifLeapYear2();
 
         }
+}

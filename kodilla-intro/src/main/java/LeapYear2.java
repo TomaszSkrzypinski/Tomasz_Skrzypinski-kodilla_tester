@@ -13,11 +13,13 @@ public class LeapYear2 {
             System.out.println("Rok nieprzestępny");
             return false;
         } else if (year%400 == 0) {
+            System.out.println("Rok przestępny");
             return true;
         } else if (year%100 == 0){
             System.out.println("Rok nieprzestępny");
             return false;
         } else {
+            System.out.println("Rok przestępny");
             return true;
         }
     }
