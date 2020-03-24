@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c803087-e439-4799-9108-1f8819c913cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kodilla-intro/src/main/java/LeapYear2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/kodilla-course-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kodilla-intro/build/classes/java/main/FirstClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kodilla-intro/build/classes/java/main/LeapYear.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kodilla-intro/build/classes/java/main/Notebook.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kodilla-intro/build/classes/java/main/SimpleArray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kodilla-intro/build/classes/java/main/laptop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kodilla-intro/build/libs/kodilla-intro-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kodilla-intro/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kodilla-intro/src/main/java/FirstClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/kodilla-intro/src/main/java/FirstClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kodilla-intro/src/main/java/LeapYear.java" beforeDir="false" afterPath="$PROJECT_DIR$/kodilla-intro/src/main/java/LeapYear.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kodilla-intro/src/main/java/rdgfbxgfbgfx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kodilla-intro/src/main/java/LeapYear2.java" beforeDir="false" afterPath="$PROJECT_DIR$/kodilla-intro/src/main/java/LeapYear2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +46,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Other File Types" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -111,22 +101,22 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="1077" y="279" key="FileChooserDialogImpl/0.0.1680.1050@0.0.1680.1050" timestamp="1584890920727" />
-    <state width="1636" height="279" key="GridCell.Tab.0.bottom" timestamp="1585073705031">
+    <state width="1636" height="279" key="GridCell.Tab.0.bottom" timestamp="1585075575310">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="279" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585073705031" />
-    <state width="1636" height="279" key="GridCell.Tab.0.center" timestamp="1585073705030">
+    <state width="1636" height="279" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585075575310" />
+    <state width="1636" height="279" key="GridCell.Tab.0.center" timestamp="1585075575310">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="279" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585073705030" />
-    <state width="1636" height="279" key="GridCell.Tab.0.left" timestamp="1585073705029">
+    <state width="1636" height="279" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585075575310" />
+    <state width="1636" height="279" key="GridCell.Tab.0.left" timestamp="1585075575310">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="279" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585073705029" />
-    <state width="1636" height="279" key="GridCell.Tab.0.right" timestamp="1585073705031">
+    <state width="1636" height="279" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585075575310" />
+    <state width="1636" height="279" key="GridCell.Tab.0.right" timestamp="1585075575310">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="279" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585073705031" />
+    <state width="1636" height="279" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585075575310" />
     <state width="779" height="340" key="GridCell.Tab.1.bottom" timestamp="1584903861587">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -147,6 +137,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="998" y="235" key="RollbackChangesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1584896557774" />
+    <state x="249" y="271" key="SettingsEditor" timestamp="1585075207523">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="249" y="271" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1585075207523" />
     <state x="535" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1585065726604">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

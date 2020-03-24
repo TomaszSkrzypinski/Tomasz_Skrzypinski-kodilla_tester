@@ -1,18 +1,14 @@
 public class Laptop {
 
-
-
     int weight;
     int price;
     int year;
 
     public Laptop(int weight, int price, int year) {
-
         this.weight = weight;
         this.price = price;
         this.year = year;
     }
-
 
     public void checkPrice(){
         if(this.price < 600) {
@@ -22,7 +18,6 @@ public class Laptop {
         } else {
             System.out.println("This notebook is  expensive.");
         }
-
     }
 
     public void checkWeight(){
@@ -33,25 +28,22 @@ public class Laptop {
         } else {
             System.out.println("This notebook is heavy.");
         }
-
     }
 
-
-    public void checkWeightAndYear(){
-        if(this.weight < 1000 && this.year <= 2015) {
-            System.out.println("This notebook is light and old.");
-        } else if(this.weight < 1000 && this.year > 2015) {
-            System.out.println("This notebook is light and new.");
-        } else if (this.weight >= 1000 && this.weight <= 1500 && this.year <= 2015) {
-            System.out.println("This notebook is not heavy and old.");
-        } else if (this.weight >= 1000 && this.weight <= 1500 && this.year > 2015) {
-            System.out.println("This notebook is not heavy and new.");
-        } else if (this.weight > 1500 && this.year <= 2015) {
-            System.out.println("This notebook is heavy and new.");
+    public void checkPricetAndYear(){
+        if(this.price < 900 && this.year <= 2015) {
+            System.out.println("This notebook is cheap and old.");
+        } else if(this.price < 900 && this.year > 2015) {
+            System.out.println("This notebook is cheap and new.");
+        } else if (this.price >= 900 && this.weight <= 1500 && this.year <= 2015) {
+            System.out.println("This price is good and notebook is old.");
+        } else if (this.price >= 900 && this.weight <= 1500 && this.year > 2015) {
+            System.out.println("This price is good and notebook is new.");
+        } else if (this.price > 1500 && this.year <= 2015) {
+            System.out.println("This notebook is expensiv and new.");
         } else {
-            System.out.println("This notebook is heavy and new.");
+            System.out.println("This notebook is expensiv and new.");
         }
-
     }
 
     public int getYear() {
