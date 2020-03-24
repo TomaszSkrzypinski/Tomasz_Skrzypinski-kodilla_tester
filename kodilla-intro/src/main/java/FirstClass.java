@@ -1,5 +1,5 @@
 public class FirstClass {
-       public static void main(String[] args) {
+public static void main(String[] args) {
         Notebook notebook = new Notebook(600, 950, 2017);
         System.out.println(notebook.weight + "g" + " " + notebook.price + " " + notebook.year + "r");
         notebook.checkPrice();
@@ -22,22 +22,22 @@ public class FirstClass {
         // Poniżej kod po zmianach
         System.out.println();
         System.out.println();
-           System.out.println("Po zmianach:");
+        System.out.println("Po zmianach:");
 
-        Laptop computer = new Laptop(600,1000, 2012);
-        System.out.println(computer.weight +"g " + computer.price);
+        Laptop computer = new Laptop(600, 1000, 2012);
+        System.out.println(computer.weight + "g " + computer.price);
         computer.checkPrice();
         computer.checkWeight();
         computer.checkWeightAndYear();
 
         Laptop heavyComputer = new Laptop(2000, 1500, 2018);
-        System.out.println(heavyComputer.weight +"g " + heavyComputer.price);
+        System.out.println(heavyComputer.weight + "g " + heavyComputer.price);
         heavyComputer.checkPrice();
         heavyComputer.checkWeight();
         heavyComputer.checkWeightAndYear();
 
         Laptop oldComputer = new Laptop(1200, 500, 2007);
-        System.out.println(oldComputer.weight +"g " + oldComputer.price);
+        System.out.println(oldComputer.weight + "g " + oldComputer.price);
         oldComputer.checkPrice();
         oldComputer.checkWeight();
         oldComputer.checkWeightAndYear();
@@ -45,13 +45,24 @@ public class FirstClass {
         int computerYear = oldComputer.getYear();
         System.out.println(computerYear);
 
-       heavyComputer.displayPrice();
+        heavyComputer.displayPrice();
 
 
-
-
-
-
-       }
+        LeapYear leapYear = new LeapYear(2000);
+        leapYear.ifLeapYear();
 
 }
+        LeapYear2 leapYear2 = new LeapYear2(2101);
+
+
+        public void ifLeapYear4() {
+                if (leapYear2.ifLeapYear2() == false) {
+                        System.out.println("Rok nieprzestępny");
+                } else {
+                        System.out.println("Rok przestępny");
+                }
+        }
+
+
+
+        }

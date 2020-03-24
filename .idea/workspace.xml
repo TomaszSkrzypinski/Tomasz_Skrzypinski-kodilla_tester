@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0c803087-e439-4799-9108-1f8819c913cc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kodilla-intro/src/main/java/LeapYear2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/kodilla-course-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kodilla-intro/build/classes/java/main/FirstClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kodilla-intro/build/classes/java/main/LeapYear.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kodilla-intro/build/classes/java/main/Notebook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kodilla-intro/build/classes/java/main/SimpleArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kodilla-intro/build/classes/java/main/laptop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kodilla-intro/build/libs/kodilla-intro-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kodilla-intro/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kodilla-intro/src/main/java/FirstClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/kodilla-intro/src/main/java/FirstClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kodilla-intro/src/main/java/LeapYear.java" beforeDir="false" afterPath="$PROJECT_DIR$/kodilla-intro/src/main/java/LeapYear.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="kodilla-course" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\kodilla-course\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Z2JbEmfad8cABrMWoKkQMtjQwM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.FirstClass">
+    <configuration name="FirstClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FirstClass" />
+      <module name="kodilla-course.kodilla-intro.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SimpleArray" />
+      <module name="kodilla-course.kodilla-intro.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SimpleArray" />
+        <item itemvalue="Application.FirstClass" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0c803087-e439-4799-9108-1f8819c913cc" name="Default Changelist" comment="" />
+      <created>1584031324800</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584031324800</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="645" y="233" key="#com.intellij.ide.util.MemberChooser" timestamp="1585067689058">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="645" y="233" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1585067689058" />
+    <state x="878" y="118" key="CommitChangelistDialog2" timestamp="1584981775718">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="878" y="118" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1584981775718" />
+    <state x="1077" y="279" key="FileChooserDialogImpl" timestamp="1584890920727">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="1077" y="279" key="FileChooserDialogImpl/0.0.1680.1050@0.0.1680.1050" timestamp="1584890920727" />
+    <state width="1636" height="279" key="GridCell.Tab.0.bottom" timestamp="1585073705031">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1636" height="279" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585073705031" />
+    <state width="1636" height="279" key="GridCell.Tab.0.center" timestamp="1585073705030">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1636" height="279" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585073705030" />
+    <state width="1636" height="279" key="GridCell.Tab.0.left" timestamp="1585073705029">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1636" height="279" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585073705029" />
+    <state width="1636" height="279" key="GridCell.Tab.0.right" timestamp="1585073705031">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1636" height="279" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585073705031" />
+    <state width="779" height="340" key="GridCell.Tab.1.bottom" timestamp="1584903861587">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="779" height="340" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1584903861587" />
+    <state width="779" height="340" key="GridCell.Tab.1.center" timestamp="1584903861587">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="779" height="340" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1584903861587" />
+    <state width="779" height="340" key="GridCell.Tab.1.left" timestamp="1584903861587">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="779" height="340" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1584903861587" />
+    <state width="779" height="340" key="GridCell.Tab.1.right" timestamp="1584903861587">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="779" height="340" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1584903861587" />
+    <state x="998" y="235" key="RollbackChangesDialog" timestamp="1584896557774">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="998" y="235" key="RollbackChangesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1584896557774" />
+    <state x="535" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1585065726604">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="535" y="347" key="com.intellij.ide.util.TipDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585065726604" />
+    <state x="649" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585067688420">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="649" y="441" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1050@0.0.1680.1050" timestamp="1585067688420" />
+    <state x="407" y="320" width="599" height="706" key="dock-window-1" timestamp="1584889076232">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="407" y="320" width="599" height="706" key="dock-window-1/0.0.1680.1050@0.0.1680.1050" timestamp="1584889076232" />
+    <state x="413" y="409" width="599" height="706" key="dock-window-2" timestamp="1584889076232">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="413" y="409" width="599" height="706" key="dock-window-2/0.0.1680.1050@0.0.1680.1050" timestamp="1584889076232" />
+    <state x="869" y="134" width="599" height="706" key="dock-window-3" timestamp="1584889076232">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="869" y="134" width="599" height="706" key="dock-window-3/0.0.1680.1050@0.0.1680.1050" timestamp="1584889076232" />
+    <state x="275" y="246" width="599" height="706" key="dock-window-4" timestamp="1584889076232">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="275" y="246" width="599" height="706" key="dock-window-4/0.0.1680.1050@0.0.1680.1050" timestamp="1584889076232" />
+    <state x="1027" y="279" key="extract.method.dialog" timestamp="1584464091069">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="1027" y="279" key="extract.method.dialog/0.0.1680.1050@0.0.1680.1050" timestamp="1584464091069" />
+    <state x="222" y="136" key="new project wizard" timestamp="1584377559699">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="222" y="136" key="new project wizard/0.0.1680.1050@0.0.1680.1050" timestamp="1584377559699" />
+    <state x="967" y="143" key="refactoring.ChangeSignatureDialog" timestamp="1584890898090">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="967" y="143" key="refactoring.ChangeSignatureDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1584890898090" />
+    <state x="496" y="237" key="run.anything.popup" timestamp="1585067712556">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="496" y="237" key="run.anything.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585067712556" />
+  </component>
+</project>
