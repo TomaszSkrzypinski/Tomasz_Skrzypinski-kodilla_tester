@@ -30,7 +30,7 @@ public class Laptop {
         }
     }
 
-    public void checkPricetAndYear(){
+    public void checkPriceAndYear(){
         if(this.price < 900 && this.year <= 2015) {
             System.out.println("This notebook is cheap and old.");
         } else if(this.price < 900 && this.year > 2015) {
@@ -40,9 +40,9 @@ public class Laptop {
         } else if (this.price >= 900 && this.weight <= 1500 && this.year > 2015) {
             System.out.println("This price is good and notebook is new.");
         } else if (this.price > 1500 && this.year <= 2015) {
-            System.out.println("This notebook is expensiv and new.");
+            System.out.println("This notebook is expensive and new.");
         } else {
-            System.out.println("This notebook is expensiv and new.");
+            System.out.println("This notebook is expensive and new.");
         }
     }
 

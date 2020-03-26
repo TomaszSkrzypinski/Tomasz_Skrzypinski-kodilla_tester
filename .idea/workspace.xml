@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c803087-e439-4799-9108-1f8819c913cc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/kodilla-intro/src/main/java/Loops.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kodilla-intro/src/main/java/Loops2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kodilla-intro/src/main/java/Loops3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kodilla-intro/src/main/java/LeapYear2.java" beforeDir="false" afterPath="$PROJECT_DIR$/kodilla-intro/src/main/java/LeapYear2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kodilla-intro/src/main/java/FirstClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/kodilla-intro/src/main/java/FirstClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kodilla-intro/src/main/java/Laptop.java" beforeDir="false" afterPath="$PROJECT_DIR$/kodilla-intro/src/main/java/Laptop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kodilla-intro/src/main/java/SimpleArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/kodilla-intro/src/main/java/SimpleArray.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +57,30 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FirstClass">
+  <component name="RunManager" selected="Application.Loops2">
     <configuration name="FirstClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FirstClass" />
+      <module name="kodilla-course.kodilla-intro.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Loops" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Loops" />
+      <module name="kodilla-course.kodilla-intro.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Loops2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Loops2" />
+      <module name="kodilla-course.kodilla-intro.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Loops3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Loops3" />
       <module name="kodilla-course.kodilla-intro.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -69,6 +95,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Loops3" />
+        <item itemvalue="Application.Loops2" />
+        <item itemvalue="Application.Loops" />
         <item itemvalue="Application.SimpleArray" />
         <item itemvalue="Application.FirstClass" />
       </list>
@@ -100,38 +129,38 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="1077" y="279" key="FileChooserDialogImpl/0.0.1680.1050@0.0.1680.1050" timestamp="1584890920727" />
-    <state width="1636" height="279" key="GridCell.Tab.0.bottom" timestamp="1585077777921">
+    <state width="780" height="176" key="GridCell.Tab.0.bottom" timestamp="1585239316479">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="279" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585077777921" />
-    <state width="1636" height="279" key="GridCell.Tab.0.center" timestamp="1585077777920">
+    <state width="780" height="176" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585239316479" />
+    <state width="780" height="176" key="GridCell.Tab.0.center" timestamp="1585239316479">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="279" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585077777920" />
-    <state width="1636" height="279" key="GridCell.Tab.0.left" timestamp="1585077777920">
+    <state width="780" height="176" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585239316479" />
+    <state width="780" height="176" key="GridCell.Tab.0.left" timestamp="1585239316479">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="279" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585077777920" />
-    <state width="1636" height="279" key="GridCell.Tab.0.right" timestamp="1585077777921">
+    <state width="780" height="176" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585239316479" />
+    <state width="780" height="176" key="GridCell.Tab.0.right" timestamp="1585239316479">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="279" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585077777921" />
-    <state width="1636" height="346" key="GridCell.Tab.1.bottom" timestamp="1585077603798">
+    <state width="780" height="176" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585239316479" />
+    <state width="1636" height="346" key="GridCell.Tab.1.bottom" timestamp="1585079388140">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="346" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585077603798" />
-    <state width="1636" height="346" key="GridCell.Tab.1.center" timestamp="1585077603797">
+    <state width="1636" height="346" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585079388140" />
+    <state width="1636" height="346" key="GridCell.Tab.1.center" timestamp="1585079388140">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="346" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585077603797" />
-    <state width="1636" height="346" key="GridCell.Tab.1.left" timestamp="1585077603797">
+    <state width="1636" height="346" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585079388140" />
+    <state width="1636" height="346" key="GridCell.Tab.1.left" timestamp="1585079388140">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="346" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585077603797" />
-    <state width="1636" height="346" key="GridCell.Tab.1.right" timestamp="1585077603798">
+    <state width="1636" height="346" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585079388140" />
+    <state width="1636" height="346" key="GridCell.Tab.1.right" timestamp="1585079388140">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1636" height="346" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585077603798" />
+    <state width="1636" height="346" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585079388140" />
     <state x="998" y="235" key="RollbackChangesDialog" timestamp="1584896557774">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
