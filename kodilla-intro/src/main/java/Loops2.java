@@ -3,10 +3,10 @@ import java.util.Random;
 public class Loops2 {
     public static void main(String[] args) {
 
-       getCountOfRandomNumber();
+       getCountOfRandomNumber(7);
     }
 
-    public int getCountOfRandomNumber ( int max){
+    public static int getCountOfRandomNumber ( int max){
             Random random = new Random();
             int result = 0;
             int sum = 0;
