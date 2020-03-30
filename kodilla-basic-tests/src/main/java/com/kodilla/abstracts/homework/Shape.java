@@ -1,14 +1,12 @@
 package com.kodilla.abstracts.homework;
 
-public abstract class Shape {
+    public abstract class Shape {
 
-private double radius;
-private double sideA;
-private double sideB;
-private double base;
-private double height;
-private double sideC;
-private double sideD;
+    private double radius;
+    private double sideA;
+    private double sideB;
+    private double base;
+    private double height;
 
     public Shape(double radius) {
         this.radius = radius;
@@ -19,11 +17,11 @@ private double sideD;
         this.sideB = sideB;
         }
 
-    public Shape(double base, double height, double sideC, double sideD) {
+    public Shape(double base, double height, double sideA, double sideB) {
         this.base = base;
         this.height = height;
-        this.sideC = sideC;
-        this.sideD = sideD;
+        this.sideA = sideA;
+        this.sideB = sideB;
         }
 
     public abstract void surfaceArea();
@@ -48,14 +46,6 @@ private double sideD;
 
     public double getHeight() {
         return height;
-        }
-
-    public double getSideC() {
-        return sideA;
-        }
-
-    public double getSideD() {
-        return sideD;
         }
 
 }

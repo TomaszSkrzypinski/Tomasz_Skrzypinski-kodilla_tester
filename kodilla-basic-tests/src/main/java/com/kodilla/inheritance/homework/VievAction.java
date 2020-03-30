@@ -7,14 +7,14 @@ public class VievAction {
         OperatingSystem win98 = new OperatingSystem(98);
         OperatingSystem win2000 = new OperatingSystem(2000);
 
-        OperatingSystem.turnOn();
-        Linux.turnOn(); // Metoda nadpisana.
+        //OperatingSystem.turnOn();
+        //Linux.turnOn(); // Metoda nadpisana.
 
         System.out.println(win95.getYear());
         System.out.println(win95.getYear());
 
-        OperatingSystem.turnOff();
-        Windows.turnOff(); // Metoda nadpisana.
+       // OperatingSystem.turnOff();
+       // Windows.turnOff(); // Metoda nadpisana.
         win2000.displaySystemYear();
 
     }
