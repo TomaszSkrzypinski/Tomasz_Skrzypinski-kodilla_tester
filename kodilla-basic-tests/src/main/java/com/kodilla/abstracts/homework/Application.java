@@ -8,11 +8,11 @@ public class Application {
         Triangle triangle = new Triangle(3, 4,6,5);
 
 
-        circle.polePow();
-        circle.obwód();
-        rectangle.polePow();
-        rectangle.obwód();
-        triangle.polePow();
-        triangle.obwód();
+        circle.surfaceArea();
+        circle.circuit();
+        rectangle.surfaceArea();
+        rectangle.circuit();
+        triangle.surfaceArea();
+        triangle.circuit();
     }
 }

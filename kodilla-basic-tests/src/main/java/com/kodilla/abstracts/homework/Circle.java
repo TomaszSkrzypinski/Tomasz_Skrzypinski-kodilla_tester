@@ -9,12 +9,12 @@ public class Circle extends Shape {
 
 
     @Override
-    public void polePow() {
+    public void surfaceArea() {
         System.out.println("Pole powierzchni koła wynosi: " + PI * getRadius()*getRadius());
     }
 
     @Override
-       public void obwód() {
+       public void circuit() {
         System.out.println("Obwód koła wynosi: " + 2*PI*getRadius());
     }
 }
