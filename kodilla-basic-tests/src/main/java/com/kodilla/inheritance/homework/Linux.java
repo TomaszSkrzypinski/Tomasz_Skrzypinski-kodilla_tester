@@ -1,12 +1,12 @@
 package com.kodilla.inheritance.homework;
 
-public class OperatingSystem3 extends OperatingSystem2 {
+public class Linux extends OperatingSystem {
 
-    public OperatingSystem3(int year) {
+    public Linux(int year) {
         super(year);
     }
 
-    public static void turnOn() {
+    public void turnOn() {
         System.out.println("System is turned on + override");
     }
 }

@@ -8,13 +8,14 @@ public class VievAction {
         OperatingSystem win2000 = new OperatingSystem(2000);
 
         OperatingSystem.turnOn();
-        OperatingSystem3.turnOn(); // Metoda nadpisana.
+        Linux.turnOn(); // Metoda nadpisana.
 
         System.out.println(win95.getYear());
-        System.out.println(win98.getYear()); // Problem. getYear pobiera rok dla obiektu win2000, a chcę, żeby pobierało dla win98.
+        System.out.println(win95.getYear());
 
         OperatingSystem.turnOff();
-        OperatingSystem2.turnOff(); // Metoda nadpisana.
-        win95.displaySystemYear();  // Problem. displaySystem Year wyświetla rok dla obiektu win2000, a chcę, żeby pobierało dla win95.
+        Windows.turnOff(); // Metoda nadpisana.
+        win2000.displaySystemYear();
+
     }
 }

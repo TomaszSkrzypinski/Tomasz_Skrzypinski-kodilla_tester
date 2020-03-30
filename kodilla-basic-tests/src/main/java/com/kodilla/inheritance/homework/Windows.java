@@ -1,12 +1,12 @@
 package com.kodilla.inheritance.homework;
 
-public class OperatingSystem2 extends OperatingSystem {
+public class Windows extends OperatingSystem {
 
-    public OperatingSystem2(int year) {
+    public Windows(int year) {
         super(year);
     }
 
-    public static void turnOff() {
+    public void turnOff() {
         System.out.println("System is turned off + override");
     }
 }
