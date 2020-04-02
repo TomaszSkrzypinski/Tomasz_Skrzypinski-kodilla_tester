@@ -1,6 +1,6 @@
 package com.kodilla.inheritance.homework;
 
-public class VieAction {
+public class ViewAction {
     public static void main(String[] args) {
 
         Windows windows95 = new Windows(1995);

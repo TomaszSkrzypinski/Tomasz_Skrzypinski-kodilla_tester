@@ -10,15 +10,15 @@ public abstract class Job {
         this.responsibilities = responsibilities;
     }
 
-    public void displayResponsibilities() {
-        System.out.println("This person responsibilities is: " + responsibilities);
-    }
-
     public int getSalary() {
         return salary;
     }
 
     public String getResponsibilities() {
         return responsibilities;
+    }
+
+    public void displayResponsibilities(){
+        System.out.println(" His duties are " + responsibilities + ".");
     }
 }
