@@ -2,8 +2,8 @@ package com.kodilla.abstracts.homework;
 
 public abstract class Job {
 
-    int salary;
-    String responsibilities;
+    private int salary;
+    private String responsibilities;
 
     public Job (int salary, String responsibilities) {
         this.salary = salary;

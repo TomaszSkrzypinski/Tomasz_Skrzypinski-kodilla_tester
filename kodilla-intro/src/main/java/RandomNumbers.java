@@ -4,28 +4,43 @@ public class RandomNumbers {
 
     public static void main(String[] args) {
 
-        getCountOfRandomNumber(5000);
+        RandomNumbers numbers = new RandomNumbers();
+
+        numbers.getMaxRandomValue();
+
+        int maxRandomValue = numbers.getMaxRandomValue();
+        int minRandomValue = numbers.getMinRandomValue();
+
+        System.out.println(maxRandomValue);
+        System.out.println(minRandomValue);
     }
 
-    public static void getCountOfRandomNumber(int max) {
+    public int getMaxRandomValue() {
         Random random = new Random();
-
+        int maxTemp = 0;
         int sum = 0;
-        while (sum <= max) {
-            int temp = random.nextInt(30);
+        while (sum <= 5000) {
+            int temp = random.nextInt(31);
             sum = sum + temp;
-
-            int minTemp = 30;
-            while (temp <= minTemp) {
-                minTemp = temp;
-            }
-
-            int maxTemp = 0;
             while (temp > maxTemp) {
                 maxTemp = temp;
             }
-            System.out.println(minTemp);
-            System.out.println(maxTemp);
         }
+        return maxTemp;
     }
+
+    public int getMinRandomValue() {
+        Random random = new Random();
+        int sum = 0;
+        int minTemp = 30;
+        while (sum <= 5000) {
+            int temp = random.nextInt(31);
+            sum = sum + temp;
+            while (temp < minTemp) {
+                minTemp = temp;
+            }
+        }
+        return minTemp;
+    }
+
 }

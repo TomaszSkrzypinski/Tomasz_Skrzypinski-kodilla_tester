@@ -13,7 +13,7 @@ public class Person {
    }
 
     public void displayInformation() {
-        System.out.println("His name is " + firstName + ", he is " + age + " years old and his duty is " + job.responsibilities + ".");
+        System.out.println("His name is " + firstName + ", he is " + age + " years old and his duty is " + job.getResponsibilities() + ".");
     }
 
     public static void main(String[] args) {
