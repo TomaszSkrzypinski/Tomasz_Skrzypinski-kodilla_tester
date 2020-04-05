@@ -3,6 +3,7 @@ package com.kodilla.collections.interfaces.homework;
 public class Fiat implements Car {
 
     int speed;
+
     public Fiat(int speed){
         this.speed=speed;
     }

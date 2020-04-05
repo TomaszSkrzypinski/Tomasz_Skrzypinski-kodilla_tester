@@ -3,9 +3,11 @@ package com.kodilla.collections.interfaces.homework;
 public class Ferrari implements Car {
 
     int speed;
+
     public Ferrari(int speed){
         this.speed=speed;
     }
+
     @Override
     public int getSpeed() {
         return speed;
