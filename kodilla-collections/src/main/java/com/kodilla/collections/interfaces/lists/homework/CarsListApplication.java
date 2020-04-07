@@ -24,7 +24,7 @@ public class CarsListApplication {
 
         cars.remove(2);
         Ferrari ferrari = new Ferrari(123);
-        cars.remove(ferrari); // To polecenie usunięcia nie działa. Czemu?
+        cars.remove(ferrari);
 
         for (Car car : cars) {
             CarUtils.describeCar(car);
