@@ -1,6 +1,5 @@
-package com.kodilla.collections.interfaces.lists.homework;
+package com.kodilla.collections.lists.homework;
 
-import com.kodilla.collections.interfaces.Triangle;
 import com.kodilla.collections.interfaces.homework.Car;
 import com.kodilla.collections.interfaces.homework.Ferrari;
 import com.kodilla.collections.interfaces.homework.Fiat;
@@ -9,8 +8,6 @@ import com.kodilla.collections.arrays.homework.CarUtils;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.kodilla.collections.arrays.homework.CarUtils.describeCar;
 
 public class CarsListApplication {
     public static void main(String[] args) {
