@@ -19,16 +19,19 @@ public class CarsListApplication {
         cars.add(new Ferrari(123));
         cars.add(new Ferrari(132));
 
-        cars.remove(2);
-        Ferrari ferrari = new Ferrari(123);
-        cars.remove(ferrari);
-
         for (Car car : cars) {
             CarUtils.describeCar(car);
         }
 
+        cars.remove(2);
+        Ferrari ferrari = new Ferrari(123);
+        cars.remove(ferrari);
+
         System.out.println();
-        System.out.println(cars.size());
+        System.out.println("Wyświetlenie po raz drugi.");
+        for (Car car : cars) {
+            CarUtils.describeCar(car);
+        }
 
     }
 }
