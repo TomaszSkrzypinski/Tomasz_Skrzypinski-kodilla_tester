@@ -1,7 +1,5 @@
 package com.kodilla.collections.arrays.homework;
 
-import com.kodilla.collections.arrays.ShapeUtils;
-import com.kodilla.collections.interfaces.Shape;
 import com.kodilla.collections.interfaces.homework.Car;
 import com.kodilla.collections.interfaces.homework.Ferrari;
 import com.kodilla.collections.interfaces.homework.Fiat;
@@ -9,7 +7,7 @@ import com.kodilla.collections.interfaces.homework.Ford;
 
 import java.util.Random;
 
-public class CarApplication {
+public class CarsApplication {
 
     public static void main(String[] args) {
         Random random = new Random();
@@ -18,20 +16,18 @@ public class CarApplication {
             cars[n] = drawCar();
         for ( Car car : cars)
             CarUtils.describeCar(car);
-
     }
 
     public static Car drawCar() {
         Random random = new Random();
         int drawnCarKind = random.nextInt(3);
-        int a = random.nextInt( 85) +1;
+        int a = random.nextInt( 25) +1;
+        int b = 80;
         if (drawnCarKind == 0)
-            return new Fiat(a);
+            return new Fiat(a+b);
         else if (drawnCarKind == 1)
-            return new Ferrari(a);
+            return new Ferrari(a+b);
         else
-            return new Ford(a);
+            return new Ford(a+b);
     }
-
-
 }
