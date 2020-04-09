@@ -10,6 +10,10 @@ public class Ferrari implements Car {
         this.speed=speed;
     }
 
+    public Ferrari(int speed, int a){
+        this.speed=speed + a;
+    }
+
     @Override
     public int getSpeed() {
         return speed;

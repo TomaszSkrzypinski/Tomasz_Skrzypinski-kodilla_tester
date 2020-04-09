@@ -24,10 +24,10 @@ public class CarsApplication {
         int a = random.nextInt( 25) +1;
         int b = 80;
         if (drawnCarKind == 0)
-            return new Fiat(a+b, a);
+            return new Fiat(b, a);
         else if (drawnCarKind == 1)
-            return new Ferrari(b);
+            return new Ferrari(b, a);
         else
-            return new Ford(b);
+            return new Ford(b, a);
     }
 }
