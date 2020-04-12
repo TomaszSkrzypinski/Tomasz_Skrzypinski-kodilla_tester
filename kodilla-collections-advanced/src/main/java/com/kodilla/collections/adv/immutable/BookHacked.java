@@ -5,15 +5,13 @@ public class BookHacked extends Book {
 
     public BookHacked(String author, String title) {
         super(author, title);
-        realTitle = title;
     }
 
-    public void modifyTitle(String newTitle) {
+    public void modifyTitle(String newTitle){
         realTitle = newTitle;
     }
 
-    @Override
-    public String getTitle() {
-        return realTitle;
+    //@Override
+    //public String getTitle() {
+    //    return realTitle;
     }
-}
