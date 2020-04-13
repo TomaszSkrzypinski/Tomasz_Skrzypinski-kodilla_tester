@@ -6,9 +6,9 @@ public class Application {
         Animal dog = new Dog();
         Animal duck = new Duck();
 
-        duck.giveVoice();
+        dog.giveVoice();
 
         AnimalProcessor processor = new AnimalProcessor();
-        processor.process(duck);
+        processor.process(dog);
     }
 }

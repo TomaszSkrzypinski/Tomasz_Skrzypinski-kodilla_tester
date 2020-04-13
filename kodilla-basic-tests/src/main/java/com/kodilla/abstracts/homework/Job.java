@@ -18,7 +18,4 @@ public abstract class Job {
         return responsibilities;
     }
 
-    public void displayResponsibilities(){
-        System.out.println(" His duties are " + responsibilities + ".");
-    }
 }
