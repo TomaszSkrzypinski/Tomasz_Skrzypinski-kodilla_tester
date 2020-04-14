@@ -1,7 +1,5 @@
 package com.kodilla.collections.adv.immutable.special.homework;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 public class Book {
@@ -11,6 +9,14 @@ public class Book {
     public Book(String title, String author) {
         this.title = title;
         this.author = author;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
     }
 
     @Override
