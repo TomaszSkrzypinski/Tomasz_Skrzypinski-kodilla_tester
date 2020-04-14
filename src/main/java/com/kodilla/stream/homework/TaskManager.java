@@ -8,7 +8,7 @@ public class TaskManager {
     public static void main(String[] args) {
         List <String> tasknames = TaskRepository.getTasks()
                 .stream()
-                .filter(TaskManager::compareDate)
+                .filter(u -> u.getDeadline().isAfter(u.getCurrentDate()))
                 .map(TaskManager::getTaskName)
                 .collect(Collectors.toList());
         System.out.println(tasknames);
@@ -17,13 +17,4 @@ public class TaskManager {
     public static String getTaskName(Task task) {
         return task.getName();
     }
-
-    public static boolean compareDate(Task task) {
-        LocalDate deadline = task.getDeadline();
-        LocalDate currentDate = LocalDate.now();
-        deadline.isAfter(currentDate);
-        return true;
-    }
 }
-
-
