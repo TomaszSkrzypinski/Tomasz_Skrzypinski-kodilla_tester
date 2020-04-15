@@ -6,7 +6,7 @@ import java.util.List;
 public class BookManager extends BookApplication{
 
     public Book createBook(String title, String author) {
-        //Nie mam pomysłu jak się zabrać za porównanie tworzonego obiektu.
+
         return new Book(title, author);
     }
 
