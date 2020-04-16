@@ -18,10 +18,15 @@ public class Application {
         students.add(new Student("student4", null));
         students.add(new Student("student5", teacher1));
 
-        for (Student student : students) { //Do tego miejsca chyba jest ok.
-            Optional <Student> optionalStudent = Optional.ofNullable(student);
+        for (Student student : students) {
+            Optional <Teacher> optionalTeacher = Optional.ofNullable(student.getTeacher());
 
-            optionalStudent.ifPresent(u -> System.out.println(student));
+            Teacher teacher = new Teacher("");
+            String teacherName =
+                    optionalTeacher.orElse(new Teacher("<undefined>")).getName();
+
+            System.out.println("Uczeń " + student.getName() + ", nauczyciel: " + teacherName);
+
         }
     }
 }

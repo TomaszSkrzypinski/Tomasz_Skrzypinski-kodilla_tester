@@ -11,5 +11,14 @@ public class OptionalExample {
         Optional<User> optionalUser = Optional.ofNullable(user);
 
         optionalUser.ifPresent(u -> System.out.println(u.getUsername()));
+
+        User user2 = null;
+
+        Optional<User> optionalUser2 = Optional.ofNullable(user2);
+
+        int username2 =
+                optionalUser2.orElse(new User("", 12, 0,"")).getAge();
+
+        System.out.println(username2);
     }
 }
