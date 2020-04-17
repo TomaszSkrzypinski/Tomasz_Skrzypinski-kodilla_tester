@@ -11,13 +11,8 @@ public class Teacher {
         return name;
     }
 
-
     @Override
     public String toString() {
-        return name;
-    }
-
-    public String setName() {
         return name;
     }
 }

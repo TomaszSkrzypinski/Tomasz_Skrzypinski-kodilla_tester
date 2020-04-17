@@ -21,16 +21,9 @@ public class Application {
 
         for (Student student : students) {
 
-            Teacher teacher = new Teacher("<undefined>");
-
-            /* Nie potrafię zrobić tego zadania bez tworzenia nowego Teachera.
-            Napisz, proszę, co powinienem wpisać w nawiasy metody orEls
-            */
-
-            Teacher optionalTeacher = Optional.ofNullable(student.getTeacher()).orElse(teacher);
+            String optionalTeacher = Optional.ofNullable(student.getTeacher()).map(u -> u.getTeacherName()).orElse("<undefined>");
 
             System.out.println("Uczeń " + student.getName() + ", nauczyciel: " + optionalTeacher);
-
         }
     }
 }
