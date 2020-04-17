@@ -1,6 +1,7 @@
 package com.kodilla.optional.homework;
 
 import com.kodilla.stream.User;
+import org.w3c.dom.ls.LSOutput;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,13 +20,16 @@ public class Application {
         students.add(new Student("student5", teacher1));
 
         for (Student student : students) {
-            Optional <Teacher> optionalTeacher = Optional.ofNullable(student.getTeacher());
 
-            Teacher teacher = new Teacher("");
-            String teacherName =
-                    optionalTeacher.orElse(new Teacher("<undefined>")).getName();
+            Teacher teacher = new Teacher("<undefined>");
 
-            System.out.println("Uczeń " + student.getName() + ", nauczyciel: " + teacherName);
+            /* Nie potrafię zrobić tego zadania bez tworzenia nowego Teachera.
+            Napisz, proszę, co powinienem wpisać w nawiasy metody orEls
+            */
+
+            Teacher optionalTeacher = Optional.ofNullable(student.getTeacher()).orElse(teacher);
+
+            System.out.println("Uczeń " + student.getName() + ", nauczyciel: " + optionalTeacher);
 
         }
     }

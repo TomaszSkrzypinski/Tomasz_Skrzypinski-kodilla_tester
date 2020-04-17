@@ -1,5 +1,8 @@
 package com.kodilla.optional.homework;
 
+import java.util.Optional;
+import java.util.function.Supplier;
+
 public class Student {
     private String name;
     private Teacher teacher;

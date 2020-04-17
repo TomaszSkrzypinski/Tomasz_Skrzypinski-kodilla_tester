@@ -7,14 +7,17 @@ public class Teacher {
         this.name = name;
     }
 
-    public String getName() {
+    public String getTeacherName() {
         return name;
     }
 
+
     @Override
     public String toString() {
-        return "Teacher{" +
-                "name='" + name + '\'' +
-                '}';
+        return name;
+    }
+
+    public String setName() {
+        return name;
     }
 }
