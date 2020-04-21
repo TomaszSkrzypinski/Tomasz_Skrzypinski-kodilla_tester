@@ -25,7 +25,7 @@ public class WarehouseApp extends Warehouse {
         System.out.println(warehouseApp.orders.size());
 
         try {
-            warehouseApp.getOrder("1");
+            warehouseApp.getOrder("111");
         } catch (OrderDoesntExistException e) {
             System.out.println("Sorry, this order don't exist.");
         }
