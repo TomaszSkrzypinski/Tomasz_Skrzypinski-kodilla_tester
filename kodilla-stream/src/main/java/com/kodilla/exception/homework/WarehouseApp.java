@@ -1,8 +1,5 @@
 package com.kodilla.exception.homework;
 
-import com.kodilla.exception.AirportNotFoundException;
-import com.kodilla.exception.AirportRepository;
-
 public class WarehouseApp extends Warehouse {
     public static void main(String[] args) {
 
@@ -22,10 +19,8 @@ public class WarehouseApp extends Warehouse {
         warehouseApp.addOrder(order5);
         warehouseApp.addOrder(order6);
 
-        System.out.println(warehouseApp.orders.size());
-
         try {
-            warehouseApp.getOrder("111");
+            System.out.println("Order number " + warehouseApp.getOrder("067") + " is exist.");
         } catch (OrderDoesntExistException e) {
             System.out.println("Sorry, this order don't exist.");
         }
