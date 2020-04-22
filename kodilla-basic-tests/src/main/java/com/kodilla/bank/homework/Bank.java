@@ -2,10 +2,10 @@ package com.kodilla.bank.homework;
 
 public class Bank {
 
-        CashMachine cashMachine1 = new CashMachine(new int[]{150, 100, -150, -200});
+        CashMachine cashMachine1 = new CashMachine(new int[]{150, -100, -150, -200});
         CashMachine cashMachine2 = new CashMachine(new int[]{100, 100, -100, -200});
         CashMachine cashMachine3 = new CashMachine(new int[]{150, 250, -150, -100});
-        CashMachine cashMachine4 = new CashMachine(new int[]{150, 200, -150, -250});
+        CashMachine cashMachine4 = new CashMachine(new int[]{-150, 200, -150, -250});
         CashMachine cashMachine5 = new CashMachine(new int[]{100, 100, -100, -250});
 
         CashMachine[] cashMachines = new CashMachine[] {cashMachine1,cashMachine2, cashMachine3, cashMachine4, cashMachine5};
@@ -18,12 +18,12 @@ public class Bank {
         return sum;
     }
 
-    public double getAverageOfAllPositiveTransations() {
+    public double getAverageOfAllPositiveTransactions() {
         double avg = getBalanceOfAllPositiveTransactions()/getNumberOfAllPositiveTransactions();
         return avg;
     }
 
-    public double getAverageOfAllNegativeTransations() {
+    public double getAverageOfAllNegativeTransactions() {
         double avg = getBalanceOfAllNegativeTransactions()/getNumberOfAllNegativeTransactions();
         return avg;
     }
@@ -31,7 +31,7 @@ public class Bank {
     public int getBalanceOfAllPositiveTransactions() {
         int sum = 0;
         for (int i = 0; i < cashMachines.length; i++) {
-            sum = sum + cashMachines[i].getBalanceOfPositiveTransaction();
+            sum = sum + cashMachines[i].getBalanceOfPositiveTransactions();
         }
         return sum;
     }
@@ -39,7 +39,7 @@ public class Bank {
     public int getBalanceOfAllNegativeTransactions() {
         int sum = 0;
         for (int i = 0; i < cashMachines.length; i++) {
-            sum = sum + cashMachines[i].getBalanceOfNegativeTransaction();
+            sum = sum + cashMachines[i].getBalanceOfNegativeTransactions();
         }
         return sum;
     }
@@ -69,7 +69,7 @@ public class Bank {
         System.out.println(bank.getNumberOfAllNegativeTransactions());
         System.out.println(bank.getBalanceOfAllPositiveTransactions());
         System.out.println(bank.getBalanceOfAllNegativeTransactions());
-        System.out.println(bank.getAverageOfAllPositiveTransations());
-        System.out.println(bank.getAverageOfAllNegativeTransations());
+        System.out.println(bank.getAverageOfAllPositiveTransactions());
+        System.out.println(bank.getAverageOfAllNegativeTransactions());
     }
 }

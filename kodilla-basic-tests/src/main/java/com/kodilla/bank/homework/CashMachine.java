@@ -22,7 +22,7 @@ public class CashMachine {
         return sum;
     }
 
-    public int getBalanceOfPositiveTransaction() {
+    public int getBalanceOfPositiveTransactions() {
         int sum = 0;
         for(int i = 0; i < cashMachine.length; i ++){
             if(cashMachine[i] > 0)
@@ -31,7 +31,7 @@ public class CashMachine {
         return sum;
     }
 
-    public int getBalanceOfNegativeTransaction() {
+    public int getBalanceOfNegativeTransactions() {
         int sum = 0;
         for(int i = 0; i < cashMachine.length; i ++){
             if(cashMachine[i] < 0)
