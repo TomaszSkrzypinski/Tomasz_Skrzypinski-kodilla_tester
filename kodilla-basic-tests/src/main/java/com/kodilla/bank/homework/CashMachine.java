@@ -22,6 +22,42 @@ public class CashMachine {
         return sum;
     }
 
+    public int getBalanceOfPositiveTransaction() {
+        int sum = 0;
+        for(int i = 0; i < cashMachine.length; i ++){
+            if(cashMachine[i] > 0)
+            sum = sum + cashMachine[i];
+        }
+        return sum;
+    }
+
+    public int getBalanceOfNegativeTransaction() {
+        int sum = 0;
+        for(int i = 0; i < cashMachine.length; i ++){
+            if(cashMachine[i] < 0)
+                sum = sum + cashMachine[i];
+        }
+        return sum;
+    }
+
+    public int getNumberOfPositiveTransactions() {
+        int number = 0;
+        for (int i = 0; i < cashMachine.length; i++) {
+            if (cashMachine[i] > 0)
+                number++;
+        }
+        return number;
+    }
+
+    public int getNumberOfNegativeTransactions() {
+        int number = 0;
+        for (int i = 0; i < cashMachine.length; i++) {
+            if (cashMachine[i] < 0)
+                number++;
+        }
+        return number;
+    }
+
     @Override
     public String toString() {
         return "CashMachine{" +
