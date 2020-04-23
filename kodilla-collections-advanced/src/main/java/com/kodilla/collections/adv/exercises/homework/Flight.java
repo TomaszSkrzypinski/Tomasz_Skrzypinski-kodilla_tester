@@ -16,4 +16,6 @@ public class Flight {
     public String getArrival() {
         return arrival;
     }
+
+
 }
