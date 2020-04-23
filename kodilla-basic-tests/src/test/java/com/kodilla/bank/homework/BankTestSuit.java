@@ -40,4 +40,18 @@ public class BankTestSuit {
         double result = bank.getAverageOfAllPositiveTransactions();
         assertEquals(143.0, result);
     }
+
+    @Test
+    public void numberOfAllPositiveTransactions() {
+        Bank bank = new Bank();
+        int result = bank.getNumberOfAllPositiveTransactions();
+        assertEquals(8, result);
+    }
+
+    @Test
+    public void numberOfAllNegativeTransactions() {
+        Bank bank = new Bank();
+        int result = bank.getNumberOfAllNegativeTransactions();
+        assertEquals(12, result);
+    }
 }
