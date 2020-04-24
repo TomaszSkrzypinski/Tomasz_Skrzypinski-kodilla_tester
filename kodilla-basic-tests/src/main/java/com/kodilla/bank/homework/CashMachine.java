@@ -58,16 +58,17 @@ public class CashMachine {
         return number;
     }
 
-    @Override
-    public String toString() {
-        return "CashMachine{" +
-                 Arrays.toString(cashMachine) +
-                '}';
-    }
 
     public int getNumberOfTransactions () {
         int numberOfElements = cashMachine.length;
         return numberOfElements;
+    }
+
+    @Override
+    public String toString() {
+        return "CashMachine{" +
+                Arrays.toString(cashMachine) +
+                '}';
     }
 
     public static void main(String[] args) {

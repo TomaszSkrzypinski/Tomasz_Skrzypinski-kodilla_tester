@@ -10,6 +10,10 @@ public class Bank {
 
         CashMachine[] cashMachines = new CashMachine[] {cashMachine1,cashMachine2, cashMachine3, cashMachine4, cashMachine5};
 
+    public CashMachine[] getCashMachines() {
+        return cashMachines;
+    }
+
     public int getTotalBalance() {
         int sum = 0;
         for (int i = 0; i < cashMachines.length; i++) {
@@ -26,24 +30,6 @@ public class Bank {
         return number;
     }
 
-    public int zeroNegativeTransactions() {
-        int number = 0;
-            number += cashMachines[0].getNumberOfNegativeTransactions();
-        return number;
-    }
-
-    public int zeroNegativeTransactions2() {
-        int number = 0;
-            number += cashMachines[2].getNumberOfNegativeTransactions();
-        return number;
-    }
-
-    public int oneNegativeTransactions() {
-        int number = 0;
-        number += cashMachines[4].getNumberOfNegativeTransactions();
-        return number;
-    }
-
     public int getNumberOfAllPositiveTransactions() {
         int number = 0;
         for (int i = 0; i < cashMachines.length; i++) {
@@ -52,51 +38,13 @@ public class Bank {
         return number;
     }
 
-    public int zeroPositiveTransactions() {
-        int number = 0;
-        number += cashMachines[1].getNumberOfPositiveTransactions();
-        return number;
-    }
-
-    public int zeroPositiveTransactions2() {
-        int number = 0;
-        number += cashMachines[2].getNumberOfPositiveTransactions();
-        return number;
-    }
-
-    public int onePositiveTransactions() {
-        int number = 0;
-        number += cashMachines[3].getNumberOfPositiveTransactions();
-        return number;
-    }
-
     public double getAverageOfAllNegativeTransactions() {
         double avg = getBalanceOfAllNegativeTransactions()/getNumberOfAllNegativeTransactions();
         return avg;
     }
 
-    public double averageOfZeroNegativeTransactions() {
-        double avg = zeroNegativeTransactions()/zeroNegativeTransactions();
-        return avg;
-    }
-
-    public double averageOfZeroNegativeTransaction2() {
-        double avg = zeroNegativeTransactions2()/zeroNegativeTransactions2();
-        return avg;
-    }
-
     public double getAverageOfAllPositiveTransactions() {
         double avg = getBalanceOfAllPositiveTransactions()/getNumberOfAllPositiveTransactions();
-        return avg;
-    }
-
-    public double averageOfZeroPositiveTransactions() {
-        double avg = zeroPositiveTransactions()/zeroPositiveTransactions();
-        return avg;
-    }
-
-    public double averageOfZeroPositiveTransaction2() {
-        double avg = zeroPositiveTransactions2()/zeroPositiveTransactions2();
         return avg;
     }
 

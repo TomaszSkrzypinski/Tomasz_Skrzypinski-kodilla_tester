@@ -6,38 +6,38 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BankTestSuit {
 
+    Bank bank = new Bank();
+
     @Test
     public void totalBalance() {
-         Bank bank = new Bank();
          int result = bank.getTotalBalance();
          assertEquals(0, result);
     }
 
     @Test
     public void numberOfAllNegativeTransactions() {
-        Bank bank = new Bank();
         int result = bank.getNumberOfAllNegativeTransactions();
         assertEquals(5, result);
     }
 
     @Test
-    public void zeroNegativeTransactions() {
-        Bank bank = new Bank();
-        int result = bank.zeroNegativeTransactions();
+    public void numberOfZeroNegativeTransactions() {
+        CashMachine[] cashMachines = bank.getCashMachines();
+        int result = cashMachines[0].getNumberOfNegativeTransactions();
         assertEquals(0, result);
     }
 
     @Test
-    public void zeroNegativeTransactions2() {
-        Bank bank = new Bank();
-        int result = bank.zeroNegativeTransactions2();
+    public void numberOfZeroNegativeTransactions2() {
+        CashMachine[] cashMachines = bank.getCashMachines();
+        int result = cashMachines[2].getNumberOfNegativeTransactions();
         assertEquals(0, result);
     }
 
     @Test
     public void oneNegativeTransactions() {
-        Bank bank = new Bank();
-        int result = bank.oneNegativeTransactions();
+        CashMachine[] cashMachines = bank.getCashMachines();
+        int result = cashMachines[4].getNumberOfNegativeTransactions();
         assertEquals(1, result);
     }
 
@@ -49,23 +49,23 @@ public class BankTestSuit {
     }
 
     @Test
-    public void zeroPositiveTransactions() {
-        Bank bank = new Bank();
-        int result = bank.zeroPositiveTransactions();
+    public void numberOfZeroPositiveTransactions() {
+        CashMachine[] cashMachines = bank.getCashMachines();
+        int result = cashMachines[1].getNumberOfPositiveTransactions();
         assertEquals(0, result);
     }
 
     @Test
-    public void zeroPositiveTransactions2() {
-        Bank bank = new Bank();
-        int result = bank.zeroPositiveTransactions2();
+    public void numberOfZeroPositiveTransactions2() {
+        CashMachine[] cashMachines = bank.getCashMachines();
+        int result = cashMachines[2].getNumberOfPositiveTransactions();
         assertEquals(0, result);
     }
 
     @Test
     public void onePositiveTransactions() {
-        Bank bank = new Bank();
-        int result = bank.onePositiveTransactions();
+        CashMachine[] cashMachines = bank.getCashMachines();
+        int result = cashMachines[3].getNumberOfPositiveTransactions();
         assertEquals(1, result);
     }
 
@@ -77,17 +77,17 @@ public class BankTestSuit {
     }
 
     @Test
-    public void averageOfZeroNegativeTransactions() {
-        Bank bank = new Bank();
-        double result = bank.zeroNegativeTransactions();
+    public void balanceOfZeroNegativeTransactions() {
+        CashMachine[] cashMachines = bank.getCashMachines();
+        int result = cashMachines[0].getBalanceOfNegativeTransactions();
         assertEquals(0, result);
     }
 
     @Test
-    public void averageOfZeroNegativeTransactions2() {
-        Bank bank = new Bank();
-        double result = bank.zeroNegativeTransactions2();
-        assertEquals(0.0, result);
+    public void balanceOfZeroNegativeTransactions2() {
+        CashMachine[] cashMachines = bank.getCashMachines();
+        int result = cashMachines[2].getBalanceOfNegativeTransactions();
+        assertEquals(0, result);
     }
 
     @Test
@@ -98,17 +98,17 @@ public class BankTestSuit {
     }
 
     @Test
-    public void averageOfZeroPositiveTransactions() {
-        Bank bank = new Bank();
-        double result = bank.zeroPositiveTransactions();
+    public void balanceOfZeroPositiveTransactions() {
+        CashMachine[] cashMachines = bank.getCashMachines();
+        int result = cashMachines[1].getBalanceOfPositiveTransactions();
         assertEquals(0, result);
     }
 
     @Test
-    public void averageOfZeroPositiveTransactions2() {
-        Bank bank = new Bank();
-        double result = bank.zeroPositiveTransactions2();
-        assertEquals(0.0, result);
+    public void balanceOfZeroPositiveTransactions2() {
+        CashMachine[] cashMachines = bank.getCashMachines();
+        int result = cashMachines[2].getBalanceOfPositiveTransactions();
+        assertEquals(0, result);
     }
 
 //    @Test
