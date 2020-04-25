@@ -12,7 +12,7 @@ public class FlightFinderTestSuit {
     FlightFinder flightFinder = new FlightFinder();
 
     @Test
-    public void flightsFromWarsaw() {
+    public void checkNumberFlightsFromWarsaw() {
         List <Flight> flightsDeparture;
         flightsDeparture = flightFinder.findFlightsFrom("Warsaw");
         int result = flightsDeparture.size();
@@ -20,7 +20,7 @@ public class FlightFinderTestSuit {
     }
 
     @Test
-    public void flightsFromBerlin() {
+    public void checkNumberFlightsFromBerlin() {
         List <Flight> flightsDeparture;
         flightsDeparture = flightFinder.findFlightsFrom("Berlin");
         int result = flightsDeparture.size();
@@ -28,7 +28,7 @@ public class FlightFinderTestSuit {
     }
 
     @Test
-    public void flightsToWarsaw() {
+    public void checkNumberFlightsToWarsaw() {
         List <Flight> flightsArrival;
         flightsArrival = flightFinder.findFlightsTo("Warsaw");
         int result = flightsArrival.size();
@@ -36,7 +36,7 @@ public class FlightFinderTestSuit {
     }
 
     @Test
-    public void flightsToRoma() {
+    public void checkNumberFlightsToRoma() {
         List <Flight> flightsArrival;
         flightsArrival = flightFinder.findFlightsTo("Roma");
         int result = flightsArrival.size();
@@ -44,7 +44,7 @@ public class FlightFinderTestSuit {
     }
 
     @Test
-    public void flightsFromHelsinki() {
+    public void checkIfFlightsFromHelsinkiAreNotAvailable() {
         List <Flight> flightsDeparture;
         flightsDeparture = flightFinder.findFlightsFrom("Helsinki");
         int result = flightsDeparture.size();
@@ -52,7 +52,7 @@ public class FlightFinderTestSuit {
     }
 
     @Test
-    public void flightsToHelsinki() {
+    public void checkIfFlightsToHelsinkiAreNotAvailable() {
         List <Flight> flightsArrival;
         flightsArrival = flightFinder.findFlightsTo("Helsinki");
         int result = flightsArrival.size();

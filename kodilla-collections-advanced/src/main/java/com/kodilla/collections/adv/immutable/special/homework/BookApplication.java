@@ -14,6 +14,7 @@ public class BookApplication {
        System.out.println(book3 == book2);
        System.out.println(book1 == book4);
 
+       System.out.println(bookManager.getBooks().size());
        bookManager.printBooksSize();
    }
 }

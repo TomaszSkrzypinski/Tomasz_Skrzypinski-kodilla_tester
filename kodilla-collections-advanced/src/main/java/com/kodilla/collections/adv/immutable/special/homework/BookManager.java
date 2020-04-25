@@ -7,6 +7,10 @@ public class BookManager extends BookApplication {
 
     List <Book> books = new ArrayList <>();
 
+    public List <Book> getBooks() {
+        return books;
+    }
+
     public void addBook(Book book) {
         books.add(book);
     }
