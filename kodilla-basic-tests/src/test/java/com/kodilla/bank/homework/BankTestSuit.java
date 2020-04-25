@@ -9,103 +9,103 @@ public class BankTestSuit {
     Bank bank = new Bank();
 
     @Test
-    public void totalBalance() {
+    public void checkTotalBalance() {
          int result = bank.getTotalBalance();
          assertEquals(0, result);
     }
 
     @Test
-    public void numberOfAllNegativeTransactions() {
+    public void checkHowManyNegativeTransactionsAreForAllCashMachines() {
         int result = bank.getNumberOfAllNegativeTransactions();
         assertEquals(5, result);
     }
 
     @Test
-    public void numberOfZeroNegativeTransactions() {
+    public void checkIfThereIsNoNegativeTransactionsForSingleCashMachine() {
         CashMachine[] cashMachines = bank.getCashMachines();
         int result = cashMachines[0].getNumberOfNegativeTransactions();
         assertEquals(0, result);
     }
 
     @Test
-    public void numberOfZeroNegativeTransactions2() {
+    public void checkIfThereIsNoNegativeTransactionsForSingleCashMachine2() {
         CashMachine[] cashMachines = bank.getCashMachines();
         int result = cashMachines[2].getNumberOfNegativeTransactions();
         assertEquals(0, result);
     }
 
     @Test
-    public void oneNegativeTransactions() {
+    public void checkIfThereIsOneNegativeTransactionsForSingleCashMachine() {
         CashMachine[] cashMachines = bank.getCashMachines();
         int result = cashMachines[4].getNumberOfNegativeTransactions();
         assertEquals(1, result);
     }
 
     @Test
-    public void numberOfAllPositiveTransactions() {
+    public void checkHowManyPositiveTransactionsAreForAllCashMachines() {
         Bank bank = new Bank();
         int result = bank.getNumberOfAllPositiveTransactions();
         assertEquals(5, result);
     }
 
     @Test
-    public void numberOfZeroPositiveTransactions() {
+    public void checkIfThereIsNoPositiveTransactionsForSingleCashMachine() {
         CashMachine[] cashMachines = bank.getCashMachines();
         int result = cashMachines[1].getNumberOfPositiveTransactions();
         assertEquals(0, result);
     }
 
     @Test
-    public void numberOfZeroPositiveTransactions2() {
+    public void checkIfThereIsNoPositiveTransactionsForSingleCashMachine2() {
         CashMachine[] cashMachines = bank.getCashMachines();
         int result = cashMachines[2].getNumberOfPositiveTransactions();
         assertEquals(0, result);
     }
 
     @Test
-    public void onePositiveTransactions() {
+    public void checkIfThereIsOnePositiveTransactionsForSingleCashMachine() {
         CashMachine[] cashMachines = bank.getCashMachines();
         int result = cashMachines[3].getNumberOfPositiveTransactions();
         assertEquals(1, result);
     }
 
     @Test
-    public void averageNegativeTransactions() {
+    public void checkAverageNegativeTransactionsForAllCashMachines() {
         Bank bank = new Bank();
         double result = bank.getAverageOfAllNegativeTransactions();
         assertEquals(-100.0, result);
     }
 
     @Test
-    public void balanceOfZeroNegativeTransactions() {
+    public void checkBalanceOfZeroNegativeTransactionsForSingleCashMachine() {
         CashMachine[] cashMachines = bank.getCashMachines();
         int result = cashMachines[0].getBalanceOfNegativeTransactions();
         assertEquals(0, result);
     }
 
     @Test
-    public void balanceOfZeroNegativeTransactions2() {
+    public void checkBalanceOfZeroNegativeTransactionsForSingleCashMachine2() {
         CashMachine[] cashMachines = bank.getCashMachines();
         int result = cashMachines[2].getBalanceOfNegativeTransactions();
         assertEquals(0, result);
     }
 
     @Test
-    public void averagePositiveTransactions() {
+    public void checkAveragePositiveTransactionsForAllCashMachines() {
         Bank bank = new Bank();
         double result = bank.getAverageOfAllPositiveTransactions();
         assertEquals(100.0, result);
     }
 
     @Test
-    public void balanceOfZeroPositiveTransactions() {
+    public void checkBalanceOfZeroPositiveTransactionsForSingleCashMachine() {
         CashMachine[] cashMachines = bank.getCashMachines();
         int result = cashMachines[1].getBalanceOfPositiveTransactions();
         assertEquals(0, result);
     }
 
     @Test
-    public void balanceOfZeroPositiveTransactions2() {
+    public void checkBalanceOfZeroPositiveTransactionsForSingleCashMachine2() {
         CashMachine[] cashMachines = bank.getCashMachines();
         int result = cashMachines[2].getBalanceOfPositiveTransactions();
         assertEquals(0, result);
@@ -113,14 +113,12 @@ public class BankTestSuit {
 
 //    @Test
 //    public void negativeTransactions() {
-//        Bank bank = new Bank();
 //        int result = bank.getBalanceOfAllNegativeTransactions();
 //        assertEquals(-500,result);
 //    }
 //
 //    @Test
 //    public void positiveTransactions() {
-//        Bank bank = new Bank();
 //        int result = bank.getBalanceOfAllPositiveTransactions();
 //        assertEquals(500,result);
 //    }
