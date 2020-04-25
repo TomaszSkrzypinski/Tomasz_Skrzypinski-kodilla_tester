@@ -8,6 +8,10 @@ public class Warehouse {
 
     List<Order> orders = new LinkedList<>();
 
+    public List <Order> getOrders() {
+        return orders;
+    }
+
     public List<Order> addOrder(Order order) {
         orders.add(order);
         return null;
