@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Assertions;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertSame;
 
 public class WarehouseTestSuit {
 
@@ -24,7 +23,6 @@ public class WarehouseTestSuit {
     @Test
     public void checkCorrectThrowExceptionForUncorrectOrderNumber() throws OrderDoesntExistException {
         warehouse.getOrder("1");
-        Assertions.assertThrows(OrderDoesntExistException.class, );//Nie wiem jak sparawdzić rzucenie wyjątku.
-                                                                   //Nie wiem nawet czy używam dobrej metody do sprawdzenia.
+        @test(expected = OrderDoesntExistException.class);
     }
 }
