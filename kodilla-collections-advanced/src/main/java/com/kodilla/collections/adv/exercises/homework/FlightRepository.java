@@ -14,6 +14,4 @@ public class FlightRepository {
         flights.add(new Flight("Roma", "Warsaw"));
         return flights;
     }
-
-
 }
