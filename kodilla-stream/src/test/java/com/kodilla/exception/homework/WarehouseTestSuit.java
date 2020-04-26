@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Assertions;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class WarehouseTestSuit {
 
@@ -20,9 +21,8 @@ public class WarehouseTestSuit {
         //Test nie przechodzi. Chce żeby metoda getOrder zwróciła order 111 i porównuję to do nowego orderu 111.
     }
 
-    @Test
+    @Test(expected = OrderDoesntExistException.class)
     public void checkCorrectThrowExceptionForUncorrectOrderNumber() throws OrderDoesntExistException {
-        warehouse.getOrder("1");
-        @test(expected = OrderDoesntExistException.class);
+        order = warehouse.getOrder("14");
     }
 }

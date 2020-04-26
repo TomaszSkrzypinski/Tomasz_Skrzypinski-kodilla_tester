@@ -20,7 +20,7 @@ public class WarehouseApp extends Warehouse {
         warehouseApp.addOrder(order6);
 
         try {
-            System.out.println("Order number " + warehouseApp.getOrder("07") + " is exist.");
+            System.out.println("Order number " + warehouseApp.getOrder("111") + " is exist.");
         } catch (OrderDoesntExistException e) {
             System.out.println("Sorry, this order don't exist.");
         }
