@@ -14,8 +14,10 @@ public class WarehouseTestSuit {
 
     @Test
     public void checkCorrectThrowExceptionForCorrectOrderNumber() throws OrderDoesntExistException {
-        order = warehouse.getOrder("111");
         Order order1 = new Order("111");
+        warehouse.addOrder(order1);
+        order = warehouse.getOrder("111");
+
         assertEquals(order1, order);
     }
 
