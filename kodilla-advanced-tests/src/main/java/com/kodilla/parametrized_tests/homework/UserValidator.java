@@ -23,7 +23,7 @@ public class UserValidator {
 
     public static void main(String[] args) {
         UserValidator userValidator = new UserValidator();
-        System.out.println(userValidator.validateUsername("tomek\n"));
+        System.out.println(userValidator.validateUsername(null));
         System.out.println(userValidator.validateEmail(""));
     }
 }
