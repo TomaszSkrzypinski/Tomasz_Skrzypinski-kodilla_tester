@@ -2,6 +2,7 @@ package com.kodilla.parametrized_tests.homework;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.NullAndEmptySource;
+import org.junit.jupiter.params.provider.NullSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -18,14 +19,14 @@ class UserValidatorTestSuite {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = {"ghhjk.pl", "aaa@ssli", "@",})
+    @ValueSource(strings = {"ghhjk.pl", "aaa@ssli", "@",""})
     public void shouldValidateEmailWorkingCorrectForEmailDoesNotMatchThePattern(String email) {
         assertFalse(userValidator.validateEmail(email));
     }
 
     @ParameterizedTest
-    @NullAndEmptySource
-    public void shouldReturnFalseForEmptyEmail(String email) {
+    @NullSource
+    public void shouldReturnFalseIfEmailIsNull(String email) {
         assertFalse(userValidator.validateEmail(email));
     }
 
@@ -36,14 +37,14 @@ class UserValidatorTestSuite {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = {"gk\n", "aa?ss\n", "aa@ss\n", "aa!ss\n"})
+    @ValueSource(strings = {"gk\n", "aa?ss\n", "aa@ss\n", "aa!ss\n", "\n", ""})
     public void shouldValidateUsernameWorkingCorrectFortUsernameDoesNotMatchThePattern(String username) {
         assertFalse(userValidator.validateUsername(username));
     }
 
     @ParameterizedTest
-    @NullAndEmptySource
-    public void shouldReturnFalseForEmptyUsername(String username) {
+    @NullSource
+    public void shouldReturnFalseIfUsernameIsNull(String username) {
         assertFalse(userValidator.validateUsername(username));
     }
 }
