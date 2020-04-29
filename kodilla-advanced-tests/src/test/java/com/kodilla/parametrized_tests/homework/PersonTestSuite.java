@@ -1,17 +1,27 @@
 package com.kodilla.parametrized_tests.homework;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class PersonTestSuite {
 
     @Test
-    public void ifMethodGetBMICorrectlyCalculateBMI(){
+    @MethodSource(value = "provideStringsForTestingLength")
+    public void ifMethodGetBMICorrectlyCalculateBMI(Person person, String expected) {
+        String actual = person.getBMI();
+        assertEquals(actual, expected);
+    }
+
+    public static Stream <Arguments> provideStringsForTestingLength() {
         Person person1 = new Person(1.66, 77);
-        PersonSources personSources1 = new PersonSources(person1, "Overweight");
-        String actual = personSources1.getPerson().getBMI();
-        String expected = personSources1.getExpectedBMI();
-        assertEquals(actual,expected);
+        return Stream.of(
+                Arguments.of(person1, "Overweight")
+
+        );
     }
 }
