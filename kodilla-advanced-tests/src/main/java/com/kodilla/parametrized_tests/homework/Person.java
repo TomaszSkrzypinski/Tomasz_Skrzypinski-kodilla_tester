@@ -38,6 +38,7 @@ public class Person {
 
     public static void main(String[] args) {
         Person person = new Person(1.66, 77);
-        System.out.println(person.getBMI());
+        PersonSources personSources10 = new PersonSources(person, "Overweight");
+        System.out.println(personSources10.getExpectedBMI());
     }
 }
