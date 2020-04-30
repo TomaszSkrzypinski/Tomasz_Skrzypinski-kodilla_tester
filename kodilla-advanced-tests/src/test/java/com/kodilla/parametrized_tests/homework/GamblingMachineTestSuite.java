@@ -15,6 +15,7 @@ class GamblingMachineTestSuite {
 
     @ParameterizedTest
     @CsvFileSource(resources = "/GamblingMachineTestNumbers.csv", numLinesToSkip = 1)
+    //test dla prawidłowej wielkości zbioru userNumbers
     public void checkHowManyWinsMethodWorkingCorrectForCorrectUserNumbersSize(Integer integer1, Integer integer2, Integer integer3, Integer integer4, Integer integer5, Integer integer6, Integer integer7) throws InvalidNumbersException {
         Set <Integer> userNumbers = new HashSet <>();
         userNumbers.add(integer1);
@@ -33,6 +34,7 @@ class GamblingMachineTestSuite {
 
     @ParameterizedTest
     @CsvFileSource(resources = "/GamblingMachineTestNumbers.csv", numLinesToSkip = 1)
+    //test dla nieprawidłowej wielkości zbioru userNumbers (pięć liczb zamiast sześciu)
     public void checkHowManyWinsMethodCorrectThrowExceptionForUncorrectUserNumbersSize(Integer integer1, Integer integer2, Integer integer3, Integer integer4, Integer integer5, Integer integer6, Integer integer7) throws InvalidNumbersException {
         Set <Integer> userNumbers = new HashSet <>();
         userNumbers.add(integer1);
@@ -46,6 +48,7 @@ class GamblingMachineTestSuite {
 
     @ParameterizedTest
     @CsvFileSource(resources = "/GamblingMachineTestNumbers.csv", numLinesToSkip = 1)
+    //test dla nieprawidłowej wartości liczb w zbiorze userNumbers (liczby mniejsze od jeden)
     public void checkHowManyWinsMethodCorrectThrowExceptionForUncorrectNumbersInUserNumbersSet(Integer integer1, Integer integer2, Integer integer3, Integer integer4, Integer integer5, Integer integer6, Integer integer7) throws InvalidNumbersException {
         Set <Integer> userNumbers = new HashSet <>();
         userNumbers.add(integer1);
