@@ -14,6 +14,4 @@ class PersonTestSuite {
         String expected = person.getExpectedBMI();
         assertEquals(actual, expected);
     }
-
-
 }
