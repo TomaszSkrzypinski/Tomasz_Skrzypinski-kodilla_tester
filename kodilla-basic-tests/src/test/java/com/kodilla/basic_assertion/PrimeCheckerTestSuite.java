@@ -57,5 +57,4 @@ public class PrimeCheckerTestSuite {
         System.out.println("Test number " + count);
         assertFalse(result);
     }
-
 }
