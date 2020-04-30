@@ -35,10 +35,4 @@ public class Person {
         }
         return "Obese Class VI (Hyper Obese)";
     }
-
-    public static void main(String[] args) {
-        Person person = new Person(1.66, 77);
-        PersonSources personSources10 = new PersonSources(person, "Overweight");
-        System.out.println(personSources10.getExpectedBMI());
-    }
 }
