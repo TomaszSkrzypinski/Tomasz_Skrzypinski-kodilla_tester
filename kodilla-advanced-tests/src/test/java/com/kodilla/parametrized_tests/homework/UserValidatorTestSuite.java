@@ -18,11 +18,11 @@ class UserValidatorTestSuite {
         assertTrue(userValidator.validateEmail(email));
     }
 
-    @ParameterizedTest
-    @ValueSource(strings = {"ghhjk.pl", "aaa@ssli", "@",""})
-    public void shouldValidateEmailWorkingCorrectForEmailDoesNotMatchThePattern(String email) {
-        assertFalse(userValidator.validateEmail(email));
-    }
+//    @ParameterizedTest
+//    @ValueSource(strings = {"ghhjk.pl", "aaa@ssli", "@",""})
+//    public void shouldValidateEmailWorkingCorrectForEmailDoesNotMatchThePattern(String email) {
+//        assertFalse(userValidator.validateEmail(email));
+//    }
 
     @ParameterizedTest
     @NullSource
@@ -42,9 +42,9 @@ class UserValidatorTestSuite {
         assertFalse(userValidator.validateUsername(username));
     }
 
-    @ParameterizedTest
-    @NullSource
-    public void shouldReturnFalseIfUsernameIsNull(String username) {
-        assertFalse(userValidator.validateUsername(username));
-    }
+//    @ParameterizedTest
+//    @NullSource
+//    public void shouldReturnFalseIfUsernameIsNull(String username) {
+//        assertFalse(userValidator.validateUsername(username));
+//    }
 }

@@ -7,11 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PersonTestSuite {
 
-    @ParameterizedTest
-    @MethodSource(value = "com.kodilla.parametrized_tests.homework.PersonSources#providePersonsForTestingBmi")
-    public void ifMethodGetBMICorrectlyCalculateBMI(PersonSources person) {
-        String actual = person.getPerson().getBMI();
-        String expected = person.getExpectedBMI();
-        assertEquals(actual, expected);
-    }
+//    @ParameterizedTest
+//    @MethodSource(value = "com.kodilla.parametrized_tests.homework.PersonSources#providePersonsForTestingBmi")
+//    public void ifMethodGetBMICorrectlyCalculateBMI(PersonSources person) {
+//        String actual = person.getPerson().getBMI();
+//        String expected = person.getExpectedBMI();
+//        assertEquals(actual, expected);
+//    }
 }
