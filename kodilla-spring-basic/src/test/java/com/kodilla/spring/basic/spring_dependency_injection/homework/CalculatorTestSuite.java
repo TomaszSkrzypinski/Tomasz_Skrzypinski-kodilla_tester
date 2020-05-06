@@ -12,10 +12,11 @@ public class CalculatorTestSuite {
     Display display = new Display();
     Calculator calculator = new Calculator(display);
 
+    ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
+    Display bean = context.getBean(Display.class);
+
     @Test
     public void checkAddMethod() {
-        ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
-        Display bean = context.getBean(Display.class);
         Double expected = bean.display(15);
         Double actual = calculator.add(12,3) ;
         Assertions.assertEquals(expected, actual);
@@ -23,8 +24,6 @@ public class CalculatorTestSuite {
 
     @Test
     public void checkSubtractMethod() {
-        ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
-        Display bean = context.getBean(Display.class);
         Double expected = bean.display(9);
         Double actual = calculator.subtract(12,3) ;
         Assertions.assertEquals(expected, actual);
@@ -32,8 +31,6 @@ public class CalculatorTestSuite {
 
     @Test
     public void checkMultiplyMethod() {
-        ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
-        Display bean = context.getBean(Display.class);
         Double expected = bean.display(36);
         Double actual = calculator.multiply(12, 3);
         Assertions.assertEquals(expected, actual);
@@ -41,10 +38,15 @@ public class CalculatorTestSuite {
 
     @Test
     public void checkDivideMethod() {
-        ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
-        Display bean = context.getBean(Display.class);
         Double expected = bean.display(4);
         Double actual = calculator.divide(12, 3);
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void checkDivideMethodDivideByZero() {
+        Double expected = bean.display(4);
+        Double actual = calculator.divide(12, 0);
         Assertions.assertEquals(expected, actual);
     }
 }

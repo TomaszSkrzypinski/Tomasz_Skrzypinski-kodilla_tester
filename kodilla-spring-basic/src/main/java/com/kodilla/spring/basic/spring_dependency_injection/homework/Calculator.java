@@ -34,4 +34,4 @@ public class Calculator {
         display.display(value);
         return value;
     }
- }
+}
