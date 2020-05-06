@@ -29,7 +29,10 @@ public class Calculator {
         return value;
     }
 
-    public double divide(double a, double b) {
+    public double divide(double a, double b) throws DivideByZeroException {
+        if (b==0) {
+            throw new DivideByZeroException();
+        }
         double value = a / b;
         display.display(value);
         return value;

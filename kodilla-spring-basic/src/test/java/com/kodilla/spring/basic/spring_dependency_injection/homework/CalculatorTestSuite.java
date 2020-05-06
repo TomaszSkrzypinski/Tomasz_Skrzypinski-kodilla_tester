@@ -37,16 +37,14 @@ public class CalculatorTestSuite {
     }
 
     @Test
-    public void checkDivideMethod() {
+    public void checkDivideMethod() throws DivideByZeroException {
         Double expected = bean.display(4);
         Double actual = calculator.divide(12, 3);
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test
-    public void checkDivideMethodDivideByZero() {
-        Double expected = bean.display(4);
-        Double actual = calculator.divide(12, 0);
-        Assertions.assertEquals(expected, actual);
+    @Test(expected = DivideByZeroException.class)
+    public void checkDivideMethodDivideByZero() throws DivideByZeroException {
+        calculator.divide(12, 0);
     }
 }
