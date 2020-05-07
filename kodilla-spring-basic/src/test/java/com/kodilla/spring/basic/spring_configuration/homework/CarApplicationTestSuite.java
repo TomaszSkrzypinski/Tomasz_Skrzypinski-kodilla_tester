@@ -6,6 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.time.LocalTime;
 import java.util.Arrays;
 import java.util.List;
 
@@ -20,8 +21,10 @@ public class CarApplicationTestSuite {
         //When
         String carType = car.getCarType();
         System.out.println(carType);
+        System.out.println(car.hasHeadlightsTurnedOn());
         //Then
         List <String> possibleCarTypes = Arrays.asList("SUV", "cabrio", "sedan");
         Assertions.assertTrue(possibleCarTypes.contains(carType));
+        Assertions.assertTrue(car.hasHeadlightsTurnedOn());
     }
 }
