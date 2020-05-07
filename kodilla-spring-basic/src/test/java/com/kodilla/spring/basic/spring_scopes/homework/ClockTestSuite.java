@@ -12,14 +12,16 @@ import java.time.LocalTime;
 public class ClockTestSuite {
 
     @Test
-    public void shouldCreateDifferentTime() {
+    public void shouldCreateDifferentTime() throws InterruptedException {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
         LocalTime firstBean = context.getBean(Clock.class).getTime();
+        Thread.sleep(500);
         LocalTime secondBean = context.getBean(Clock.class).getTime();
+        Thread.sleep(500);
         LocalTime thirdBean = context.getBean(Clock.class).getTime();
+        Assertions.assertNotEquals(firstBean, secondBean);
+        Assertions.assertNotEquals(secondBean, thirdBean);
         Assertions.assertNotEquals(firstBean, thirdBean);
-        //porównanie między beanami utworzonymi bezpośrednio po sobie potrafiło dać wynik true,
-        // dlatego porównuję pierwszego i trzeciebi beana
     }
 
 }
