@@ -10,12 +10,12 @@ import java.util.Random;
 @Configuration
 public class CarApplication {
 
-    LocalTime time= LocalTime.of(05,25);
+    LocalTime time= LocalTime.of(5,25);
 
     @Bean
     public Car choseCar() {
-        LocalTime tstart = LocalTime.of(06,00);
-        LocalTime tstop = LocalTime.of(20,00);
+        LocalTime tstart = LocalTime.of(6, 0);
+        LocalTime tstop = LocalTime.of(20,0);
         boolean headlightsOn;
         if (time.isAfter(tstart) && time.isBefore(tstop)) {
             headlightsOn = false;
@@ -26,12 +26,11 @@ public class CarApplication {
         Random random = new Random();
         int season = random.nextInt(3);
         if (season == 0) {
-            return car = new SUV(headlightsOn);
-
+            return  new SUV(headlightsOn);
         } else if (season == 1 || season ==4) {
-            return car = new Sedan(headlightsOn);
+            return  new Sedan(headlightsOn);
         } else {
-            return car = new Cabrio(headlightsOn);
+            return  new Cabrio(headlightsOn);
         }
     }
 }

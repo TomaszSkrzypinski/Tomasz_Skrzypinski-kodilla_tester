@@ -14,7 +14,7 @@ import java.util.List;
 public class CarApplicationTestSuite {
 
     @Test
-    public void shouldCreateRandomAnimal() {
+    public void shouldCreateRandomCarWithTurnedOnHeadlights() {
         //Given
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
         Car car = (Car) context.getBean("choseCar");
