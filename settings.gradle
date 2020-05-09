@@ -12,4 +12,5 @@ include 'kodilla-advanced-tests'
 include 'kodilla-advenced-tests'
 include 'kodilla-advanced-tests'
 include 'kodilla-spring-basic'
+include 'kodilla-rest-api'
 
