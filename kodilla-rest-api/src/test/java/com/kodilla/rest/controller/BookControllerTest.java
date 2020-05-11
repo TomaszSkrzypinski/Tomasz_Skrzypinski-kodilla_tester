@@ -18,14 +18,15 @@ class BookControllerTest {
         //given
         BookService bookServiceMock = Mockito.mock(BookService.class);
         BookController bookController = new BookController(bookServiceMock);
-        List<BookDto> bookList = new ArrayList <>();
-        bookList.add(new BookDto("Title1", "Author1"));
-        bookList.add(new BookDto("Title2", "Author2"));
+        List<BookDto> booksList = new ArrayList <>();
+        booksList.add(new BookDto("Title1", "Author1"));
+        booksList.add(new BookDto("Title2", "Author2"));
+        Mockito.when(bookServiceMock.getBooks()).thenReturn(booksList);
         //when
 
         List<BookDto> result = bookController.getBooks();
         //then
-        assertThat(bookList).hasSize(2);
+        assertThat(result).hasSize(2);
 
     }
 
