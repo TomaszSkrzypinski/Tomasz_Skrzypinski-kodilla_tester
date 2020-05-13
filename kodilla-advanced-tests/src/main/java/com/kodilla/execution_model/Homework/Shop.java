@@ -9,7 +9,11 @@ import java.util.stream.Collectors;
 
 public class Shop {
 
-    Set<Order> orders = new HashSet<>();
+    private Set<Order> orders = new HashSet<>();
+
+    public Set <Order> getOrders() {
+        return orders;
+    }
 
     public void addOrder(Order order) {
         orders.add(order);
