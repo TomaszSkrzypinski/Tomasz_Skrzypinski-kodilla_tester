@@ -27,31 +27,46 @@ class AlertServiceTestSuite {
         Mockito.verify(client3, Mockito.never()).receive(alert);
     }
 
-    //Możliwość usunięcia subskrypcji z danej lokalizacji.
+    //Ad.2 - Możliwość usunięcia subskrypcji z danej lokalizacji.
     @Test
     public void unsubscribedForSpecifiedLocalizationClientShouldNotReceiveNotification() {
-        alertService.addSubscriber(client1, localization1);
-        alertService.addSubscriber(client1, localization2);
-        alertService.removeSubscriberForOneLocalization(client1, localization2);//Metoda removeSubscriber... usuwa obie pozycje dla client1
-        alertService.addSubscriber(client3, localization1);
-        alertService.addSubscriber(client3, localization2);
-        alertService.removeSubscriberForOneLocalization(client3, localization2);//Metoda removeSubscriber... usuwa obie pozycje dla client3
+        alertService.addSubscriberAndLocalization(client1, localization2);
+        alertService.removeSubscriberForOneLocalization(client1, localization2);
+        alertService.addSubscriberAndLocalization(client3, localization2);
+        alertService.removeSubscriberForOneLocalization(client3, localization2);
+        alertService.addSubscriberAndLocalization(client2, localization1);  //Dodoaję client2 do 3 lokalizacji.
+        alertService.addSubscriberAndLocalization(client2, localization2);
+        alertService.addSubscriberAndLocalization(client2, localization3);
+        alertService.removeSubscriberForOneLocalization(client2, localization1);//Metoda usuwająca subskrybcję usuwa client2
+                                                                                //z mapy.
 
         alertService.sendAlertForAll(alert);
-        Mockito.verify(client1, Mockito.times(1)).receive(alert);
-        Mockito.verify(client3, Mockito.times(1)).receive(alert);
-//        alertService.sendAlertForOneLocalization(alert, localization1);
-//        Mockito.verify(client1, Mockito.times(1)).receive(alert);
-//        Mockito.verify(client3, Mockito.times(1)).receive(alert);
+        Mockito.verify(client1, Mockito.times(0)).receive(alert);
+        Mockito.verify(client3, Mockito.times(0)).receive(alert);
+        Mockito.verify(client2, Mockito.times(1)).receive(alert);
     }
 
-    //Możliwość wysyłki alertu do wybranej lokalizacji.
+    //Ad.3 - Całkowite usunięcie klienta.
+    @Test
+    public void shouldBeRemoveClient() {
+        alertService.addSubscriberAndLocalization(client1, localization2);
+        alertService.addSubscriberAndLocalization(client1, localization1);
+        alertService.addSubscriberAndLocalization(client1, localization3);
+        alertService.addSubscriberAndLocalization(client2, localization3);
+        alertService.removeSubscriberPermanently(client1);
+
+        alertService.sendAlertForAll(alert);
+        Mockito.verify(client1, Mockito.times(0)).receive(alert);
+        Mockito.verify(client2, Mockito.times(1)).receive(alert);
+    }
+
+    //Ad.4 - Możliwość wysyłki alertu do wybranej lokalizacji.
     @Test
     public void alertShouldBeSentToSpecifiedLocalizationSubscribedClients() {
-        alertService.addSubscriber(client1, localization2);//Zmiana kolejności 51 z 52 spowoduje błąd testu
-        alertService.addSubscriber(client1, localization1);
-        alertService.addSubscriber(client3, localization3);//Zmiana kolejności 531 z 54 spowoduje błąd testu
-        alertService.addSubscriber(client3, localization1);
+        alertService.addSubscriberAndLocalization(client1, localization2);
+        alertService.addSubscriberAndLocalization(client1, localization1);
+        alertService.addSubscriberAndLocalization(client3, localization3);
+        alertService.addSubscriberAndLocalization(client3, localization1);
 
         alertService.sendAlertForOneLocalization(alert, localization1);
         Mockito.verify(client1, Mockito.times(1)).receive(alert);
@@ -59,31 +74,47 @@ class AlertServiceTestSuite {
         Mockito.verify(client3, Mockito.times(1)).receive(alert);
     }
 
-    //Możliwość wysyłki alertu do wybranej lokalizacji.
+    //Ad.4 - Możliwość wysyłki alertu do wybranej lokalizacji.
     @Test
     public void alertShouldBeSentToSpecifiedLocalizationSubscribedClients2() {
-        alertService.addSubscriber(client1, localization2);//Zmiana kolejności 65 z 66 spowoduje błąd testu
-        alertService.addSubscriber(client1, localization1);
-        alertService.addSubscriber(client3, localization2);//Zmiana kolejności 67 z 68 spowoduje błąd testu
-        alertService.addSubscriber(client3, localization1);
+        alertService.addSubscriberAndLocalization(client1, localization2);
+        alertService.addSubscriberAndLocalization(client1, localization1);
+        alertService.addSubscriberAndLocalization(client3, localization2);
+        alertService.addSubscriberAndLocalization(client3, localization1);
 
         alertService.sendAlertForOneLocalization2(alert, localization1);
-        Mockito.verify(client1, Mockito.times(1)).receive(alert);
+        alertService.sendAlertForOneLocalization2(alert, localization2);
+        Mockito.verify(client1, Mockito.times(2)).receive(alert);
         Mockito.verify(client2, Mockito.never()).receive(alert);
-        Mockito.verify(client3, Mockito.times(1)).receive(alert);
+        Mockito.verify(client3, Mockito.times(2)).receive(alert);
     }
 
-    //Możliwość wysyłki powiadomienia do wszystkich.
+    //Ad.5 - Możliwość wysyłki powiadomienia do wszystkich.
     @Test
     public void alertShouldBeSentToAllSubscribedClients() {
-        alertService.addSubscriber(client1, localization1);
-        alertService.addSubscriber(client2, localization2);
-        alertService.addSubscriber(client1, localization3);
-        alertService.addSubscriber(client3, localization1);
+        alertService.addSubscriberAndLocalization(client1, localization1);
+        alertService.addSubscriberAndLocalization(client2, localization2);
+        alertService.addSubscriberAndLocalization(client1, localization3);
+        alertService.addSubscriberAndLocalization(client3, localization1);
 
         alertService.sendAlertForAll(alert);
         Mockito.verify(client1, Mockito.times(1)).receive(alert);
         Mockito.verify(client2, Mockito.times(1)).receive(alert);
         Mockito.verify(client3, Mockito.times(1)).receive(alert);
+    }
+
+    //Ad.6 - Skaowanie lokalizacji.
+    @Test
+    public void shouldBeRemoveLocalization() {
+        alertService.addSubscriberAndLocalization(client1, localization1);
+        alertService.addSubscriberAndLocalization(client1, localization2);
+        alertService.addSubscriberAndLocalization(client2, localization1);
+        alertService.addSubscriberAndLocalization(client2, localization2);
+        alertService.removeLocalization(localization1);
+
+        alertService.sendAlertForOneLocalization2(alert, localization1);
+        alertService.sendAlertForOneLocalization2(alert, localization2);
+        Mockito.verify(client1, Mockito.times(1)).receive(alert);
+        Mockito.verify(client2, Mockito.times(1)).receive(alert);
     }
 }
