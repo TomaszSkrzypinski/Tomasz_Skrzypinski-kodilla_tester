@@ -15,12 +15,12 @@ public class AlertService {
         if (clientsAndLocalisations.size() < 1) {
             clientsAndLocalisations.put(client, localizations);
             clientsAndLocalisations.get(client).add(localization);
-        } else {for (Map.Entry <Client, Set<Localizations>> note : clientsAndLocalisations.entrySet()) { //Kompilator zgłasza błąd w tym wierszu.
-                if (note.getKey().equals(client)) {                     //sprawdza czy klient występuje w mapie
-                    note.getValue().add(localization);                  //jeśli tak dodaje lokalizację do klienta
+        } else {for (Map.Entry <Client, Set<Localizations>> note : clientsAndLocalisations.entrySet()) { //Kompilator zgłasza błąd w tym wierszu w sytuacji kiedy dodaję 3 klientów.KLIENTÓW.
+                if (note.getKey().equals(client)) {
+                    note.getValue().add(localization);
                 } else {
-                    clientsAndLocalisations.put(client, localizations);   //jeśli nie dodaje klienta do mapy
-                    clientsAndLocalisations.get(client).add(localization);//i lokalizację do nowego clienta
+                    clientsAndLocalisations.put(client, localizations);
+                    clientsAndLocalisations.get(client).add(localization);
                 }
             }
         }
@@ -45,8 +45,8 @@ public class AlertService {
     public void sendAlertForOneLocalization(Alert alert, Localizations localization) {
         List <Client> clients = clientsAndLocalisations.entrySet()
                 .stream()
-                .filter(u -> u.getValue().contains(localization))//Nie potrafię przefiltrować wg lokalizacji.
-                .map(u -> u.getKey())                            //następna metoda korzystająca z pętli działa poprawnie.
+                .filter(u -> u.getValue().contains(localization))
+                .map(u -> u.getKey())
                 .collect(Collectors.toList());
         clients.forEach(client -> client.receive(alert));
     }
@@ -55,10 +55,11 @@ public class AlertService {
     public void sendAlertForOneLocalization2(Alert alert, Localizations localization) {
         Set <Client> clients = new HashSet <>();
         for (Map.Entry <Client, Set <Localizations>> note : clientsAndLocalisations.entrySet()) {
-            if (note.getValue().equals(localization)) {
+            if (note.getValue().contains(localization)) {
                 clients.add(note.getKey());
+            } else {
+                clients.forEach(client -> client.receive(alert));
             }
-            clients.forEach(client -> client.receive(alert));
         }
     }
 
@@ -67,6 +68,7 @@ public class AlertService {
         Set <Client> clients = clientsAndLocalisations.entrySet()
                 .stream()
                 .map(u -> u.getKey())
+
                 .collect(Collectors.toSet());
         clients.forEach(client -> client.receive(alert));
     }
