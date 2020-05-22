@@ -8,22 +8,25 @@ import java.util.stream.Collectors;
 public class AlertService {
 
     private Map <Client, Set <Localizations>> clientsAndLocalisations = new HashMap <>();
-    private Set <Localizations> localizations = new HashSet <>();
+
 
     //Dodaje klienta i lokalizację.
     public void addSubscriberAndLocalization(Client client, Localizations localization) {
+        Set <Localizations> localizations = new HashSet <>();
+        Set<Client> clientsSet = new HashSet <>();
         if (clientsAndLocalisations.size() < 1) {
             clientsAndLocalisations.put(client, localizations);
             clientsAndLocalisations.get(client).add(localization);
-        } else {for (Map.Entry <Client, Set<Localizations>> note : clientsAndLocalisations.entrySet()) { //Kompilator zgłasza błąd w tym wierszu w sytuacji kiedy dodaję 3 klientów.KLIENTÓW.
-                if (note.getKey().equals(client)) {
-                    note.getValue().add(localization);
+        } else clientsSet =
+                clientsAndLocalisations.entrySet().stream()
+                    .map(u -> u.getKey())
+                    .collect(Collectors.toSet());
+                if (clientsSet.contains(client)) {
+                    clientsAndLocalisations.get(client).add(localization);
                 } else {
                     clientsAndLocalisations.put(client, localizations);
                     clientsAndLocalisations.get(client).add(localization);
                 }
-            }
-        }
     }
 
     //Usuwa lokalizację dla danego klienta.
@@ -57,10 +60,9 @@ public class AlertService {
         for (Map.Entry <Client, Set <Localizations>> note : clientsAndLocalisations.entrySet()) {
             if (note.getValue().contains(localization)) {
                 clients.add(note.getKey());
-            } else {
-                clients.forEach(client -> client.receive(alert));
             }
         }
+        clients.forEach(client -> client.receive(alert));
     }
 
     //Możliwość wysyłki powiadomienia do wszystkich.
