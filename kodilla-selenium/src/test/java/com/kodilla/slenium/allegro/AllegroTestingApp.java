@@ -1,5 +1,8 @@
-package com.kodilla.selenium.allegro;
+package com.kodilla.slenium.allegro;
 
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,12 +12,20 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.concurrent.TimeUnit;
 
 public class AllegroTestingApp {
-    public static void main(String[] args) {
+
+    WebDriver driver;
+
+    @Before
+    public  void setUp() {
         System.setProperty("webdriver.chrome.driver", "c:\\selenium-drivers\\chrome\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
+    }
+
+     @Test
+     public void searchProduct() {
         driver.get("https://www.allegro.pl");
 
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+       driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
 
         WebElement dialogWindow = driver.findElement(By.xpath("//button[@data-role='accept-consent']"));
         dialogWindow.click();
@@ -25,8 +36,11 @@ public class AllegroTestingApp {
 
         WebElement inputField = driver.findElement(By.xpath("//input[@role='combobox']"));
         inputField.sendKeys("Mavic mini");
+        inputField.submit();
+    }
 
-        WebElement searchButton = driver.findElement(By.xpath("//button[@data-role='search-button']"));
-        searchButton.click();
+    @After
+    public void tearDown() {
+        driver.close();
     }
 }
