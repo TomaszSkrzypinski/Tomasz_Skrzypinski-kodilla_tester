@@ -31,5 +31,4 @@ public class ShapeApplication {
         else
             return new Triangle(a, b, c);
     }
-
 }

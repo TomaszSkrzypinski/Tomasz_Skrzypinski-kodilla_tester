@@ -3,7 +3,7 @@ import java.util.Random;
 public class Loops2 {
     public static void main(String[] args) {
 
-       getCountOfRandomNumber(7);
+       getCountOfRandomNumber(77);
     }
 
     public static int getCountOfRandomNumber ( int max){
