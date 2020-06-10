@@ -8,47 +8,45 @@ public class CzyJestPodzielneSteps implements En {
     private String odpowiedź;
 
     public CzyJestPodzielneSteps() {
-        Given("sprawdź liczbę 3", () -> {
+       Given("sprawdź liczbę {int}", (Integer int1) -> {
             this.liczba = 3;
         });
 
-        Given("sprawdź liczbę 5", () -> {
+       Given("sprawdź liczbę {int}", (Integer int1) -> {
             this.liczba = 5;
         });
 
-        Given("sprawdź liczbę 9", () -> {
+       Given("sprawdź liczbę {int}", (Integer int1) -> {
             this.liczba = 9;
         });
 
-        Given("sprawdź liczbę 10", () -> {
+       Given("sprawdź liczbę {int}", (Integer int1) -> {
             this.liczba = 10;
         });
 
-        Given("sprawdź liczbę 15", () -> {
+       Given("sprawdź liczbę {int}", (Integer int1) -> {
             this.liczba = 15;
         });
 
-        Given("sprawdź liczbę 30", () -> {
+       Given("sprawdź liczbę {int}", (Integer int1) -> {
             this.liczba = 30;;
         });
 
-        Given("sprawdź liczbę 8", () -> {
+       Given("sprawdź liczbę {int}", (Integer int1) -> {
             this.liczba = 8;
         });
 
-        Given("sprawdź liczbę 17", () -> {
+       Given("sprawdź liczbę {int}", (Integer int1) -> {
             this.liczba = 17;
         });
 
-        When("Sprawdź czy dzieli się przez 3 lub 5", () -> {
+       When("Sprawdź czy dzieli się przez {int} lub {int}", (Integer int1, Integer int2) -> {
             CzyJestPodzielne czyJestPodzielne = new CzyJestPodzielne();
             this.odpowiedź = czyJestPodzielne.czyJestPodzielne(this.liczba);
         });
 
-        Then("Jeśli tak to {string}", (String string) -> {
+       Then("Jeśli tak to {string}", (String string) -> {
             Assert.assertEquals(string, this.odpowiedź);
         });
-
-
     }
 }
