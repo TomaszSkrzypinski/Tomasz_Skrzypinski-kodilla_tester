@@ -8,7 +8,7 @@ public class CzyJestPodzielneSteps implements En {
     private String odpowiedz;
 
     public CzyJestPodzielneSteps() {
-       Given("sprawdz liczbe <liczba>", (Integer int1) -> {
+       Given("sprawdz liczbe {int}", (Integer int1) -> {
             this.liczba = int1;
         });
 
