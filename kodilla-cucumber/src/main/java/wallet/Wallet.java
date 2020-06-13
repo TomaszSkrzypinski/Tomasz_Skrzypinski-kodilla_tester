@@ -6,15 +6,20 @@ public class Wallet {
     public Wallet() {
     }
 
-    public void deposit (int money) {
-        this.balance += money;
+    public void deposit (int money) throws IncorrectDepositValue {
+        if (money <= 0) {
+            throw new IncorrectDepositValue(); }
+        else {
+        this.balance += money;}
     }
 
     public int getBalance() {
         return balance;
     }
 
-    public void debit(int money) {
+    public void debit(int money) throws TooMuchPayout {
+        if (money > balance)
+            throw new TooMuchPayout();
         this.balance -= money;
     }
 }

@@ -7,7 +7,7 @@ public class Cashier {
         this.cashSlot = cashSlot;
     }
 
-    public void withdraw(Wallet wallet, int amount) {
+    public void withdraw(Wallet wallet, int amount) throws TooMuchPayout {
         wallet.debit(amount);
         cashSlot.dispense(amount);
     }

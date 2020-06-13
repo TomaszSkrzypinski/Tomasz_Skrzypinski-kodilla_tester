@@ -14,11 +14,10 @@ Feature: Cash Withdrawal
   Scenario: Unsuccessful withdrawal from a wallet
     Given I have deposited $200 in my wallet
     When I request $210
-    Then $210 should be dispensed
-    And the balance of my wallet should be $-10
+    Then TooMuchPayout
+    And the balance of my wallet should be $200
 
   Scenario: Unsuccessful deposited in a wallet
     Given I have deposited $-200 in my wallet
-    When I request $50
-    Then $50 should be dispensed
-    And the balance of my wallet should be $-250
+    Then IncorrectDepositValue
+    And the balance of my wallet should be $0
