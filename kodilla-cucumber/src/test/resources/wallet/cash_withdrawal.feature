@@ -20,4 +20,4 @@ Feature: Cash Withdrawal
   Scenario: Unsuccessful deposited in a wallet
     Given I have deposited $-200 in my wallet
     Then IncorrectDepositValue
-    And the balance of my wallet should be $0
+    And the balance of my wallet not change
