@@ -4,7 +4,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"src/test/resources/debit.Debit"}
+        features = {"src/test/resources/debit"}
 )
 public class TestRunnerDebit {
 }
