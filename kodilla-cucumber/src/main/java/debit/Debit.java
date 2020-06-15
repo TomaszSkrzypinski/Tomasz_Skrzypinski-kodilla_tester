@@ -6,12 +6,10 @@ public class Debit {
 
     private double balance = 0;
     private double debit = 0;
-    private double totalBalance = balance + debit;
-
-    Debit object = new Debit();
+    private double totalBalance;
 
     public double getTotalBalance() {
-        return totalBalance;
+        return totalBalance = balance + debit;
     }
 
     public void increaseBalance(double increase) {
@@ -28,10 +26,10 @@ public class Debit {
 
     public void withdraw(double withdraw) {
         if (balance >= withdraw) {
-            object.decreaseBalance(withdraw);
-        } else if (totalBalance >= withdraw) {
+            this.decreaseBalance(withdraw);
+        } else if (this.getTotalBalance() >= withdraw) {
             this.balance = 0;
-            this.debit = totalBalance - withdraw;
+            this.debit = this.totalBalance - withdraw;
         } else {
             System.out.println("You have insufficient funds in your account");
         }
