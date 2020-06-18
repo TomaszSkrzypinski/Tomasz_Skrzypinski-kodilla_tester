@@ -52,6 +52,7 @@ public class DbManagerTestSuite {
                     rs.getString("LASTNAME"));
             counter++;
         }
+
         int expected = count + 5;
         Assert.assertEquals(expected, counter);
 
@@ -87,16 +88,27 @@ public class DbManagerTestSuite {
         rs = statement.executeQuery(sqlQuery);
 
         //Then
+        System.out.println("\nNext test");
         int counter = 0;
         while(rs.next()) {
             System.out.println(rs.getString("FIRSTNAME") + ", " +
                     rs.getString("LASTNAME"));
             counter++;
         }
-        int expected = count + 5;
         Assert.assertEquals(2, counter);
 
+        String countQuery2 = "SELECT COUNT(*) FROM USERS";
+
+        ResultSet rs2 = statement.executeQuery(countQuery2);
+        int count2 = 0;
+        while (rs2.next()) {
+            count2 = rs2.getInt("COUNT(*)");
+        }
+        int expected = count + 5;
+        Assert.assertEquals(expected, count2);
+
         rs.close();
+        rs2.close();
         statement.close();
     }
 }
