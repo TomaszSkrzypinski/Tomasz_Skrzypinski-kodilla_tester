@@ -2,8 +2,6 @@ package com.kodilla.basic_assertion;
 
 public class PrimeChecker {
 
-    private int count;
-
     public boolean isPrime(int number) {
         if (number < 2) {
             return false;
@@ -14,13 +12,5 @@ public class PrimeChecker {
             }
         }
         return true;
-    }
-
-    public int getCount() {
-        return count;
-    }
-
-    public void incrementCount() {
-        this.count++;
     }
 }
