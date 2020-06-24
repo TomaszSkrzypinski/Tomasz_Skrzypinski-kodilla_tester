@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="9da9a497-02e5-426a-a449-f942fec73e3b" activeEnvironment="Default" name="Kodilla soap library" resourceRoot="" soapui-version="5.5.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="61982d03-2e20-4a72-a279-e0218dd692da" wsaVersion="NONE" name="BooksPortSoap11" type="wsdl" bindingName="{http://kodilla.com/courses/soap}BooksPortSoap11" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/ws/books.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/ws/books.wsdl"><con:part><con:url>http://localhost:8080/ws/books.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://kodilla.com/courses/soap" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://kodilla.com/courses/soap" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://kodilla.com/courses/soap">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://kodilla.com/courses/soap" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="getBookRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="signature" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getBookResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="book" type="tns:book"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="book">
+        <xs:sequence>
+          <xs:element name="title" type="xs:string"/>
+          <xs:element name="author" type="xs:string"/>
+          <xs:element name="signature" type="xs:string"/>
+          <xs:element name="release" type="xs:int"/>
+          <xs:element name="genre" type="tns:genre"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="genre">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="sci-fi"/>
+          <xs:enumeration value="fantasy"/>
+          <xs:enumeration value="tech"/>
+          <xs:enumeration value="crime"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getBookRequest">
+    <wsdl:part element="tns:getBookRequest" name="getBookRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBookResponse">
+    <wsdl:part element="tns:getBookResponse" name="getBookResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="BooksPort">
+    <wsdl:operation name="getBook">
+      <wsdl:input message="tns:getBookRequest" name="getBookRequest"></wsdl:input>
+      <wsdl:output message="tns:getBookResponse" name="getBookResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BooksPortSoap11" type="tns:BooksPort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getBook">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="getBookRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getBookResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BooksPortService">
+    <wsdl:port binding="tns:BooksPortSoap11" name="BooksPortSoap11">
+      <soap:address location="http://localhost:8080/ws"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/ws</con:endpoint></con:endpoints><con:operation id="b9f5602a-ef26-4eea-8024-5f24f0bdc701" isOneWay="false" action="" name="getBook" bindingOperationName="getBook" type="Request-Response" outputName="getBookResponse" inputName="getBookRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2132c70d-3f76-41db-97df-4bd27d2e6db8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://kodilla.com/courses/soap">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <soap:getBookRequest>\r
+         <soap:signature>?</soap:signature>\r
+      </soap:getBookRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://kodilla.com/courses/soap/BooksPort/getBookRequest"/></con:call></con:operation></con:interface><con:testSuite id="408bcca1-4e7f-4a06-b4a9-a805d33bbdbd" name="BooksPortSoap TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="cda7cf37-4ab8-4675-933b-135a45bf6ad8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Book abcd signature TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="7327acba-d5dc-4424-8c1e-76205da1dd01" name="getBook"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BooksPortSoap11</con:interface><con:operation>getBook</con:operation><con:request name="getBook" id="ce491044-1339-464e-95c6-cc739bacac30"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://kodilla.com/courses/soap">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <soap:getBookRequest>\r
+         <soap:signature>abcd</soap:signature>\r
+      </soap:getBookRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" id="0a5c8a07-c223-4d29-bac1-46072be6fbd3" name="Contains"><con:configuration><token>genre>sci-fi&lt;</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://kodilla.com/courses/soap/BooksPort/getBookRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="f2d24c6c-ccb6-441a-b54d-a8b313a4ef5b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Book bcde signature TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="aa8ea32f-4967-4040-9fb7-829c3e427a7f" name="getBook"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BooksPortSoap11</con:interface><con:operation>getBook</con:operation><con:request name="getBook" id="ce491044-1339-464e-95c6-cc739bacac30"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://kodilla.com/courses/soap">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <soap:getBookRequest>\r
+         <soap:signature>bcde</soap:signature>\r
+      </soap:getBookRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" id="0a5c8a07-c223-4d29-bac1-46072be6fbd3" name="Contains"><con:configuration><token>author>Author2&lt;</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://kodilla.com/courses/soap/BooksPort/getBookRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="5b92b5f0-358e-445a-bdb3-7a1d08990ca3" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Book efgh signature TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="af80535b-3ee5-4f7f-b4d5-e442809e9525" name="getBook"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BooksPortSoap11</con:interface><con:operation>getBook</con:operation><con:request name="getBook" id="ce491044-1339-464e-95c6-cc739bacac30"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://kodilla.com/courses/soap">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <soap:getBookRequest>\r
+         <soap:signature>efgh</soap:signature>\r
+      </soap:getBookRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="Simple NotContains" id="5f1c619a-30c7-479d-bb55-0ac59f8f37de" name="Not Contains"><con:configuration><token>signature>efgh&lt;</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://kodilla.com/courses/soap/BooksPort/getBookRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
