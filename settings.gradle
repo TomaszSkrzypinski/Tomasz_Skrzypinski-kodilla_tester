@@ -19,4 +19,6 @@ include 'selenium2'
 include 'kodilla-selenium'
 include 'kodilla-cucumber'
 include 'kodilla-code-coverage'
+include 'kodilla-soap'
+include 'kodilla-soap-library'
 

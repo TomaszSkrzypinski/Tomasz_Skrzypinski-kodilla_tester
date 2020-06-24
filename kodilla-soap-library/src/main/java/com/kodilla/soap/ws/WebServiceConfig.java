@@ -23,18 +23,18 @@ public class WebServiceConfig extends WsConfigurerAdapter {
         return new ServletRegistrationBean(servlet, "/ws/*");
     }
 
-    @Bean(name = "courses")
-    public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema coursesSchema) {
+    @Bean(name = "books")
+    public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema booksSchema) {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
-        wsdl11Definition.setPortTypeName("CoursesPort");
+        wsdl11Definition.setPortTypeName("BooksPort");
         wsdl11Definition.setLocationUri("/ws");
         wsdl11Definition.setTargetNamespace("http://kodilla.com/courses/soap");
-        wsdl11Definition.setSchema(coursesSchema);
+        wsdl11Definition.setSchema(booksSchema);
         return wsdl11Definition;
     }
 
     @Bean
-    public XsdSchema coursesSchema() {
+    public XsdSchema booksSchema() {
         return new SimpleXsdSchema(new ClassPathResource("kodilla.xsd"));
     }
 }
